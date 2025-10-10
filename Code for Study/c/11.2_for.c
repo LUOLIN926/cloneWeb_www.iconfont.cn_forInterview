@@ -13,9 +13,9 @@ int main(){
     
     //i + 1 可用 i++ 与表示,注意与++i的区别
     int a = 5;
-    int x = a++;  //x = 5, a = 6 (先取值，后自增)
+    int x = a++;  //x = 5, a = 6 (i++先取值，后自增)
     printf("1_a=%d x=%d\n",a,x);
-    int y = ++a;  //y = 7, a = 7 (先自增，后取值)
+    int y = ++a;  //y = 7, a = 7 (++i先自增，后取值)
     printf("2_a=%d y=%d\n",a,y);
     
     
