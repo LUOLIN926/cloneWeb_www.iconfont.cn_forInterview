@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06.1_form_HTMl_study</title>
+</head>
+<body>
+    <form>
+        <!-- 文本框text -->
+        姓名：<input type="text" placeholder="请输入你的姓名" value="" name="user_name"><br><br>
+        <!-- value是输入文本框的内容 name是数据含义 -->
+
+        <!-- 密码框password -->
+        密码：<input type="password" placeholder="请输密码"><br><br>
+
+        <!-- 单选框radio -->
+        性别：
+        <input type="radio" name="sex" checked>保密
+        <!-- checked表示默认选项 -->
+        <input type="radio" name="sex">男
+        <input type="radio" name="sex">女<br><br>
+        <!-- 输入同一个name才可以实现单选 -->
+
+        <!-- 多选框checkbox -->
+        爱好：<input type="checkbox">唱<input type="checkbox">跳<input type="checkbox">Rap<input type="checkbox">篮球<br><br>
+
+        <!-- 文件提交file -->
+        单选文件：<input type="file"><br><br>
+        多选文件：<input type="file" multiple><br><br>
+
+        <!-- 按钮 !!!需要将表单使用form包裹-->
+        <!-- submit提交 -->
+        <input type="submit">
+
+        <!-- reset重置 -->
+        <input type="reset"><br><br>
+        <!-- ！！！是将所有选项恢复为默认，而不是清空 -->
+
+        <!-- button普通按钮 -->
+        <button type="submit">提交</button>
+        <button type="reset">还原</button>
+        <button type="button">一个平平无奇的按钮</button>
+
+    </form>
+
+</body>
+</html>
