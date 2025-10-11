@@ -11,7 +11,7 @@ int main(){
         printf("%d\n",i);
     }
     
-    //i + 1 可用 i++ 与表示,注意与++i的区别
+    //i + 1 可用 i++ 与表示,注意与 ++i 的区别
     int a = 5;
     int x = a++;  //x = 5, a = 6 (i++先取值，后自增)
     printf("1_a=%d x=%d\n",a,x);
