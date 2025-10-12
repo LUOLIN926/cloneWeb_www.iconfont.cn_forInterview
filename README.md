@@ -5,6 +5,10 @@
 
 ## 已学习进度
 
+- 完成了页面的基础排版（见```Code_for_Study/html+css```文件夹）
+![基础排版](assets/basicWebLayout.png)
+
+
 1. **git**
    - 注册、建仓、更新仓库、版本管理、克隆仓库
    - 在vscode中操作github仓库

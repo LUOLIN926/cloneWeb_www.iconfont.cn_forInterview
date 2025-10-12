@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>01_basicWebLayout_HTMl+CSS_practice</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* 添加header和nav间距 */
+    .container {
+      display: grid;
+      grid-template-rows: auto auto 1fr auto;
+      grid-template-columns: 1fr;
+      min-height: 100vh;
+      grid-row-gap: 20px; 
+    }
+
+    header {
+      background-color: #75fbfd;
+      color: black;
+      padding: 25px 0;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #fbe5c8;
+      color: black;
+      padding: 25px 0;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      gap: 20px;
+      padding: 20px;
+      background-color: white;
+    }
+
+    aside {
+      background-color: #f2a93b;
+      color: black;
+      font-weight: bold;
+      text-align: center;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .body {
+      background-color: #f2a93b;
+      color: black;
+      font-weight: bold;
+      text-align: center;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    footer {
+      background-color: #f0a8c0;
+      color: black;
+      padding: 25px 0;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>header</header>
+    <nav>nav</nav>
+    <main>
+      <aside>aside1</aside>
+      <div class="body">body</div>
+      <aside>aside2</aside>
+    </main>
+    <footer>footer</footer>
+  </div>
+</body>
+</html>
