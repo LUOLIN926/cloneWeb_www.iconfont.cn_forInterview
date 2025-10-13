@@ -6,7 +6,7 @@
 ## 已学习进度
 
 - 完成了页面的基础排版（见```Code_for_Study/html+css```文件夹）
-![基础排版](assets/basicWebLayout.png)
+![基础排版](assets/markdown/README/basicWebLayout.png)
 
 
 1. **git**
