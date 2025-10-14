@@ -1,0 +1,42 @@
+header {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-row: 60px;
+    background-color: black;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon img{
+    width: 150px;height: 50px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 14px;
+}
