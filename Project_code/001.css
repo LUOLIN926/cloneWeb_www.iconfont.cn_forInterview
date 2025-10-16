@@ -1,20 +1,35 @@
+/* 基础样式 */
 header {
+    background-color: black;
+    height: 60px;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 0 solid white; /* 默认无下边框 */
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-row: 60px;
-    background-color: black;
 }
 
 .icon {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.icon img{
-    width: 150px;height: 50px;
+    height: 100%;
 }
 
-.nav {
+.icon img {
+    width: 150px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.nav-main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -23,20 +38,141 @@ header {
     align-items: center;
 }
 
-.nav a{
+.nav-main a {
     color: aliceblue;
     text-decoration: none;
     font-size: 14px;
+    font-family: tahoma, "microsoft yahei", sans-serif !important;
+    padding: 6px 12px;
+    border-radius: 100px;
+    transition: all 0.3s ease;
 }
 
-.login {
+.nav-main a:hover {
+    background-color: #2a2a2a;
+    border-radius: 100px;
+}
+
+.nav-login {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 14px;
+    font-family: tahoma, "microsoft yahei", sans-serif !important;
 }
 
-.login a{
-    color: aliceblue;
+.nav-login a {
+    color: #727272;
     text-decoration: none;
     font-size: 14px;
+}
+
+.nav-login a:hover {
+    transition: all 0.3s ease;
+    color: white;
+}
+
+/* 主体部分修改为红色 */
+main {
+    background-color: red; /* 设置主体背景为红色 */
+    padding: 20px 0; /* 添加内边距使内容不紧贴边缘 */
+    text-align: center; /* 居中显示图片 */
+}
+
+/* 实现icon随着网页宽度缩小而缩小 */
+@media (max-width: 800px) {
+    .icon {
+        display: none;
+    }
+    
+    /* 小屏幕下添加白色下边框 */
+    header {
+        border-bottom: 1px solid white;
+    }
+}
+
+@media (min-width: 801px) and (max-width: 920px) {
+    .icon img {
+        width: calc(125px * ((100vw - 801px) / (920px - 801px)));
+        height: calc(33px * ((100vw - 801px) / (920px - 801px)));
+        transform-origin: left center;
+    }
+}
+
+@media (min-width: 921px) {
+    .icon img {
+        width: 125px;
+        height: 33px;
+    }
+}
+
+
+footer {
+    background-color: #1e1e1e;
+    color: rgba(255,255,255,.5);
+    padding: 0 20px 12px;
+    box-sizing:border-box;
+    font-family: tahoma, "microsoft yahei", sans-serif !important;
+    text-align: left;
+    text-decoration: none;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-left, .footer-right {
+    flex: 1;
+}
+
+.footer-left {
+    width: 656px;
+    height: 100%;
+    margin-top: 45px;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.footer-left img {
+    max-width: 100%;
+    width: 106px;
+    height: 26px;
+}
+
+.footer-left p {
+    margin-top: 2px;
+}
+
+.footer-right h3 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer-right .links a {
+    color: #ccc;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-right .links a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
 }
