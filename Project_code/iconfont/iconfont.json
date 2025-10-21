@@ -1,0 +1,30 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "326523",
+      "name": "upload",
+      "font_class": "weibiaoti1",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "18744610",
+      "name": "langEn",
+      "font_class": "yuyan-yingwen",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "42645116",
+      "name": "lang-cn",
+      "font_class": "lang-cn",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    }
+  ]
+}

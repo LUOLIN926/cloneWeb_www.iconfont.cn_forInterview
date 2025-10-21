@@ -21,6 +21,11 @@ a:active, a:hover {
     outline:0 none
 }
 
+blockquote, body, dd, dir, dl, fieldset, figure, form, h1, h2, h3, h4, h5, h6, hr, input, legend, menu, ol, optgroup, p, pre, tbody, td, textarea, tfoot, th, thead, ul{
+    margin: 0;
+    padding: 0;
+}
+
 ul {
     list-style-type: none;
     list-style-image:none;
@@ -40,6 +45,11 @@ p {
     margin-inline-start: 0px;
 }
 
+li {
+    display: list-item;
+    text-align: match-parent;
+}
+
 img {
     border: 0 none;
     height: auto;
@@ -48,18 +58,25 @@ img {
     vertical-align: top;
 }
 
-body{
+body {
     font-size: 12px;
     font-family: tahoma, "microsoft yahei", sans-serif !important;
     line-height: 1.42857143;
 }
 
-header {
-    background-color: black;
-    height: 60px;
-    width: 100%;
-    box-sizing: border-box;
-    border-bottom: 0 solid white; /* 默认无下边框 */
+body, button, input, select, textarea {
+    font-size: 12px;
+    color: #333;
+    line-height: 1.42857143;
+}
+
+.wrap {
+max-width: 1160px;
+margin: 0 auto;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
 }
 
 .container {
@@ -160,6 +177,9 @@ main {
         height: 33px;
     }
 }
+
+
+/* footer */
 
 .footer, .footer .foot-right .share-logos .share-logo.share-weixin, .footer .wrap {
     position:relative
