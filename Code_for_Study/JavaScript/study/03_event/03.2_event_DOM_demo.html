@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_event_DOM_demo</title>
+    <script src="./myjs02.js"></script>
+</head>
+
+<body>
+    <div id="box1">
+        这是一个有id的div
+    </div>
+
+    <div class="box2">
+        这是一个有class的div
+    </div>
+
+    <div>
+        这是一个普普通通的div
+    </div>
+
+    <script>
+        var element_id = document.getElementById('box1');
+        console.log(element_id);
+
+        var element_class = document.getElementsByClassName('box2');
+        console.log(element_class);//输出整个HTMLcollection
+
+        element_class = document.getElementsByClassName('box2')[0];//加入索引
+        console.log(element_class);//输出HTML标签
+
+        var element_tag = document.getElementsByTagName('div');
+        console.log(element_tag);
+
+        element_tag = document.getElementsByTagName('div')[2];
+        console.log(element_tag);
+        
+    </script>
+</body>
+
+</html>
