@@ -20,6 +20,12 @@
         这是一个普普通通的div
     </div>
 
+    <hr>
+
+    <button>
+        我是一个按钮
+    </button>
+
     <script>
         var element_id = document.getElementById('box1');
         console.log(element_id);
@@ -36,7 +42,27 @@
         element_tag = document.getElementsByTagName('div')[2];
         console.log(element_tag);
         
+        element_id.innerHTML = '<a href="">这是一个有id的div,但是被修改了</a>';
+        element_class.innerText = '这是一个有class的div,但是被修改了';
+
+        element_tag.style.fontSize = '20px';
+        element_tag.style.color = 'red';
+
+        // DOM属性绑定事件
+         var button_element = document.getElementsByTagName('button')[0];
+         console.log(button_element);
+
+        //匿名函数
+        //  button_element.onclick = function(){
+        //     alert('DOM属性-按钮触发');
+        //  }
+         
+        button_element.addEventListener('click',function(){
+            alert('DOM属性-addEventlisener');
+        })
+
     </script>
+    
 </body>
 
 </html>
