@@ -1,82 +1,7 @@
-:root {
-    text-autospace: normal;
-    --index-radius: 18px;
-}
-
-.clearfix:after{
-    clear:both;
-    display: table;
-    content: "";
-}
-
-/* 基础样式 */
-a {
-    color: #666;
-    outline: 0;
-    text-decoration: none;
-    text-underline-position:under
-}
-
-a:active, a:hover {
-    outline:0 none
-}
-
-blockquote, body, dd, dir, dl, fieldset, figure, form, h1, h2, h3, h4, h5, h6, hr, input, legend, menu, ol, optgroup, p, pre, tbody, td, textarea, tfoot, th, thead, ul{
-    margin: 0;
-    padding: 0;
-}
-
-ul {
-    list-style-type: none;
-    list-style-image:none;
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    padding-inline-start: 40px;
-    margin: 0;
-    padding: 0;
-}
-
-p {
-    margin: 0;
-    padding: 0;
-    display: block;
-    margin-block-start: 1em;
-    margin-inline-start: 0px;
-}
-
-li {
-    display: list-item;
-    text-align: match-parent;
-}
-
-img {
-    border: 0 none;
-    height: auto;
-    width: auto;
-    max-width: 100%;
-    vertical-align: top;
-}
-
-body {
-    font-size: 12px;
-    font-family: tahoma, "microsoft yahei", sans-serif !important;
-    line-height: 1.42857143;
-}
-
-body, button, input, select, textarea {
-    font-size: 12px;
-    color: #333;
-    line-height: 1.42857143;
-}
-
+/* 导航栏 */
 .wrap {
-max-width: 1160px;
-margin: 0 auto;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
-    display: block;
+    max-width: 1160px;
+    margin: 0 auto;
 }
 
 .container {
@@ -100,6 +25,34 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
     height: 50px;
     object-fit: contain;
 }
+
+/* 实现icon随着网页宽度缩小而缩小 */
+@media (max-width: 800px) {
+    .icon {
+        display: none;
+    }
+    
+    /* 小屏幕下添加白色下边框 */
+    header {
+        border-bottom: 1px solid white;
+    }
+}
+
+@media (min-width: 801px) and (max-width: 920px) {
+    .icon img {
+        width: calc(125px * ((100vw - 801px) / (920px - 801px)));
+        height: calc(33px * ((100vw - 801px) / (920px - 801px)));
+        transform-origin: left center;
+    }
+}
+
+@media (min-width: 921px) {
+    .icon img {
+        width: 125px;
+        height: 33px;
+    }
+}
+
 
 .nav-main {
     display: flex;
@@ -144,40 +97,92 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
     color: white;
 }
 
-/* 主体部分修改为红色 */
+/* 主体部分 */
 main {
     background-color: red; /* 设置主体背景为红色 */
     padding: 20px 0; /* 添加内边距使内容不紧贴边缘 */
     text-align: center; /* 居中显示图片 */
 }
 
-/* 实现icon随着网页宽度缩小而缩小 */
-@media (max-width: 800px) {
-    .icon {
-        display: none;
-    }
-    
-    /* 小屏幕下添加白色下边框 */
-    header {
-        border-bottom: 1px solid white;
-    }
+/* slogan区域 */
+.page-home {
+    position: relative;
+    overflow: hidden;
+    min-height: 750px;
+    background-color: #000;
 }
 
-@media (min-width: 801px) and (max-width: 920px) {
-    .icon img {
-        width: calc(125px * ((100vw - 801px) / (920px - 801px)));
-        height: calc(33px * ((100vw - 801px) / (920px - 801px)));
-        transform-origin: left center;
-    }
+.page-home .slogan {
+    text-align: center;
+    color: #fff;
+    padding-top: 46px;
 }
 
-@media (min-width: 921px) {
-    .icon img {
-        width: 125px;
-        height: 33px;
-    }
+.page-home .slogan h1 {
+    font-size: 42px;
+    color: #FFF;
+    display:inline-block
 }
 
+.page-home .slogan h2 {
+    font-size: 18px
+}
+
+/* 搜索区域 */
+.page-home .search-wrap {
+    margin-top: 45px;
+    text-align: center;
+}
+
+.page-home .search-main {
+    position: relative;
+    width: 1020px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+}
+
+.swiper-pagination {
+    position: absolute;
+    text-align: center;
+    -webkit-transition: .3s opacity;
+    -o-transition: .3s opacity;
+    transition: .3s opacity;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    z-index: 10;
+}
+
+.page-home .search-main .swiper-pagination {
+position: relative;
+display: flex;
+gap: 12px;
+padding: 5px 0;
+margin-bottom: 10px;
+box-sizing: border-box;
+}
+
+.page-home .search-main .swiper-pagination-bullet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 32px;
+    padding: 0 18px;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 9999px;
+    background: 0 0;
+    background:rgba(255, 255, 255, .05)
+}
+
+.page-home .search-main .swiper-pagination-bullet-active {
+    border: none;
+    color: #000;
+    background-color: #00F9E5;
+    background-image: linear-gradient(110deg, #AAFC89, #00F9E5 44%, #2D60FF);
+    border-radius: 999px;
+}
 
 /* footer */
 
