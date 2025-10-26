@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_简单计数器</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        .counter-container {
+            text-align: center;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .counter {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 20px 0;
+        }
+
+        .btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #2c8bcf;
+        }
+
+        .btn:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="counter-container">
+        <h1>计数器</h1>
+        <div class="counter" id="counter">0</div>
+        <button class="btn" id="plusBtn">+1</button>
+        <button class="btn" id="clearBtn">清零</button>
+    </div>
+
+    <script>
+        // 获取DOM元素
+        const counterElement = document.getElementById('counter');
+        const plusButton = document.getElementById('plusBtn');
+        const clearButton = document.getElementById('clearBtn');
+        
+        // 初始化计数器
+        let count = 0;
+        
+        // 为按钮添加点击事件监听器
+        plusButton.addEventListener('click', function() {
+            count++;
+            counterElement.textContent = count;
+        });
+
+        clearButton.addEventListener('click',function(){
+            count = 0;
+            counterElement.textContent = count;
+            alert('计数器已清零');
+        })
+    </script>
+
+</body>
+</html>
