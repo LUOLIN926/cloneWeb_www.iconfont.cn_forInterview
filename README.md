@@ -33,7 +33,7 @@
    
    b.实践项目
       - 完成了页面的基础排版（见`Code_for_Study/CSS/practice/01_basicWebLayout.html`文件）
-![基础排版](assets/markdown/README/basicWebLayout.png)
+      ![基础排版](assets/markdown/README/basicWebLayout.png)
 
 ### Week_02
 
@@ -47,4 +47,12 @@
 
 2. **CSS**
    a.学习内容
-   - CSS选择器（类、ID、）
+   - CSS选择器（类、ID、伪类）
+
+3. **JavaScript**
+   a.学习内容 
+   - JS基本语法（变量、数据类型、运算符、控制结构）
+   - DOM操作（`document.getElementById`、`addEventListener`）
+   
+   b.实践项目
+   - 使用HTML、JS创建一个计数器（有清零功能）

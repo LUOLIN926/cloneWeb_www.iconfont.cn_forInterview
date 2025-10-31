@@ -4,6 +4,10 @@
     margin: 0 auto;
 }
 
+.homewrap {
+    max-width: 1350px;
+}
+
 .container {
     max-width: 1440px;
     width: 100%;
@@ -97,6 +101,55 @@
     color: white;
 }
 
+header .site-nav .quick-menu>ul {
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+
+/* 图标样式 */
+.iconfont.icon-weibiaoti1,
+.iconfont.icon-yuyan-yingwen,
+.iconfont.icon-gouwuche,
+.iconfont.icon-notice {
+    color: rgba(255,255,255,.5);
+    font-size: 24px;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* 图标悬停效果 */
+.iconfont.icon-weibiaoti1:hover,
+.iconfont.icon-yuyan-yingwen:hover,
+.iconfont.icon-gouwuche:hover,
+.iconfont.icon-notice:hover {
+    color: #fff;
+}
+
+/* 用户头像 */
+.avatar-min {
+    width: 25px;
+    height: 25px;
+    background:0 0
+}
+
+.avatar {
+    display: inline-block;
+    vertical-align:middle
+}
+
+.avatar-min {
+    width: 25px;
+    height: 25px;
+    background: 0 0;
+    border-radius: 50%; /* 添加这行使头像变为圆形 */
+}
+
+.cp {
+    position: relative;
+}
+
 /* 主体部分 */
 main {
     background-color: red; /* 设置主体背景为红色 */
@@ -108,7 +161,7 @@ main {
 .page-home {
     position: relative;
     overflow: hidden;
-    min-height: 750px;
+    /* min-height: 750px; */
     background-color: #000;
 }
 
@@ -173,7 +226,10 @@ box-sizing: border-box;
     color: #fff;
     border-radius: 9999px;
     background: 0 0;
-    background:rgba(255, 255, 255, .05)
+    background:rgba(255, 255, 255, .05);
+    cursor: pointer;/* 将鼠标光标设置为指针样式 */
+    transition: all 0.3s ease;
+    user-select: none;/* 禁止用户选中文本 */
 }
 
 .page-home .search-main .swiper-pagination-bullet-active {
@@ -222,7 +278,8 @@ box-sizing: border-box;
 }
 
 .footer .foot-left .foot-content {
-    margin-top:25px
+    margin-top:25px;
+    line-height: 18px;
 }
 
 .footer .foot-left .foot-copy-right {

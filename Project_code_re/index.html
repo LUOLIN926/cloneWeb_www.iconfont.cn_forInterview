@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>www.iconfont.cn_clone</title>
+
     <link rel="stylesheet" href="./00_basic.css">
     <link rel="stylesheet" href="./001.css">
     <link rel="stylesheet" href="./101.css">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <link rel="stylesheet" href="./car.css">
+
+    <script src="./search.js"></script>
+    <script src="./car.js"></script>
 </head>
 
-<body data-spm="home_2025" class="iconfont-home">
+<body class="iconfont-home">
 <div class="root">
 <div class="wrapper">
-    <div mx-view="app/views/common/header" id="magix_vf_header" data-spm="i3" p-id="6">
+    <div id="magix_vf_header">
         <header>
             <!-- 导航容器 -->
             <div class="site-nav wrap homewrap">
                 <div class="logo">
-                    <a href="/" data-spm-click="gostr=/iconfont.s.c;locaid=d4d0a486a">
-                        <img src="https://img.alicdn.com/imgextra/i2/O1CN01FF1t1g1Q3PDWpSm4b_!!6000000001920-55-tps-508-135.svg" alt="iconfont Logo" p-id="118" data-spm-anchor-id="a313x.home_2025.i3.i0.16983a81u3CGgd">
+                    <a href="/">
+                        <img src="web_assets/web_logo.svg" alt="iconfont Logo">
                     </a>
                 </div>
             
@@ -89,103 +95,81 @@
                 
                 <div class="quick-menu">
                     <ul>
-                        <li class="m-my-tab-item">
-                            <a vclick-ignore="true" href="/icons/upload" data-spm-click="gostr=/iconfont.s.c;locaid=d059fa781" class="upload" p-id="328">
-                                <i class="iconfont" p-id="329">
-                                U
-                                </i>
+                        <!-- 上传图标 -->
+                       <li class="m-my-tab-item">
+                            <a href="" class="upload">
+                                <span class="iconfont icon-weibiaoti1"></span>
                             </a>
                         </li>
+
+                        <!-- 语言图标 -->
                         <li class="m-my-tab-item">
-                            <span class="lang-btn iconfont" mx-click="changeLanguage('en-us')" data-spm-click="gostr=/iconfont.s.c;locaid=db1b1e3c3" p-id="332">
-                                E
-                            </span>
+                            <span class="iconfont icon-yuyan-yingwen"></span>
                         </li>
+
+                        <!-- 购物车图标 -->
                         <li class="m-my-tab-item">
-                            <span class="icon-car" p-id="336">
-                                <span class="iconfont" p-id="337">
-                                    C
-                                </span>
-                                <span id="J_icon_car_count" class="icon-car-count none" p-id="339">
-                                    0
-                                </span>
-                            </span>
+                            <span class="iconfont icon-gouwuche"></span>
                         </li>
-                        <li id="magix_notice_count" p-id="341">
-                            <span class="mod-notice√-num icon" p-id="342">
-                                <span class="iconfont icon-notice" p-id="343">
-                                    N
-                                </span>
-                                <div id="J_notification_header_view" mx-view="app/views/common/notice_count" mx-options="{}" p-id="344">
-                                    <div p-id="750" id="mx_n_1761043183032">
-                                        <div class="icon-car-count" p-id="751">
-                                            <span p-id="752">
-                                                4
-                                            </span>
-                                        </div>
-                                        <ul class="head-dropdown" p-id="706">
-                                            <li p-id="707">
-                                                <a class="item" href="/notifications?tab=official" p-id="708">
-                                                    <span class="item-title" p-id="709">官方</span>
-                                                    <span class="icon-car-count" p-id="711">
-                                                        <span p-id="712">4</span>
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            
-                                            <li p-id="713"><a class="item" href="/notifications?tab=notice" p-id="714">
-                                                <span class="item-title" p-id="715">通知</span>
-                                                <span class="icon-car-count" p-id="717">
-                                                    <span p-id="718">0</span></span>
-                                                </a>
-                                            </li>
-                                            
-                                            <li p-id="719">
-                                                <a class="item" href="/chats" p-id="720">
-                                                    <span class="item-title" p-id="721">私信</span>
-                                                    <span class="icon-car-count" p-id="723">
-                                                        <span p-id="724">0</span>
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            
-                                            <li class="item ft" p-id="725">
-                                                <a href="/notifications" p-id="726">查看全部</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </span>
+
+                        <!-- 通知图标 -->
+                        <li id="magix_notice_count" class="notification-item">
+                            <span class="iconfont icon-notice" p-id="343"></span>
+                            <ul class="head-dropdown notification-dropdown">
+                                <li>
+                                    <a class="item" href="" vclick-ignore="true">
+                                        官方
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item" href="" vclick-ignore="true">
+                                        通知
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item" href="" vclick-ignore="true">
+                                        私信
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item" href="" vclick-ignore="true">
+                                        查看全部
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
-                        <li p-id="345">
-                            <div class="cp" p-id="348">
+
+                        <!-- 头像区 -->
+                        <li>
+                            <div class="cp">
                                 <span class="avatar avatar-min" p-id="349">
                                     <img src="web_assets/head/user.png" p-id="350">
                                 </span>
                             </div>
-                            <ul class="head-dropdown" p-id="351">
-                                <li class="gap" p-id="352">
-                                    <a class="item" href="/user/detail?uid=15748400&amp;nid=fUQIlIN4PQeE" vclick-ignore="true" p-id="353">
-                                        <span p-id="354">LIN_LUO</span>
+                            
+                            <ul class="head-dropdown">
+                                <li class="gap">
+                                    <a class="item" href="" vclick-ignore="true">
+                                        <span>LIN_LUO</span>
                                     </a>
                                 </li>
-                                <li p-id="355">
-                                    <a class="item" href="/user/detail?uid=15748400&amp;nid=fUQIlIN4PQeE" vclick-ignore="true" p-id="356">
+                                <li>
+                                    <a class="item" href="" vclick-ignore="true">
                                         个人主页
                                     </a>
                                 </li>
-                                <li p-id="358">
-                                    <a class="item" href="/user/center" data-spm-click="gostr=/iconfont.s.c;locaid=de91a75a0" vclick-ignore="true" p-id="359">
+                                <li>
+                                    <a class="item" href="" data-spm-click="gostr=/iconfont.s.c;locaid=de91a75a0" vclick-ignore="true">
                                         个人信息
                                     </a>
                                 </li>
-                                <li p-id="361">
-                                    <a class="item" href="/user/center?tab=account" data-spm-click="gostr=/iconfont.s.c;locaid=def8908de" vclick-ignore="true" p-id="362">
+                                <li>
+                                    <a class="item" href="" data-spm-click="gostr=/iconfont.s.c;locaid=def8908de" vclick-ignore="true" p-id="362">
                                         账户管理
                                     </a>
                                 </li>
-                                <li p-id="364">
-                                    <span class="item" mx-click="confirm()" data-spm-click="gostr=/iconfont.s.c;locaid=ded9b439d" p-id="365">
+                                <li>
+                                    <span class="item"  data-spm-click="gostr=/iconfont.s.c;locaid=ded9b439d">
                                         退出
                                     </span>
                                 </li>
@@ -212,12 +196,15 @@
                          <div class="search-wrap">
                             <div class="search-main">
                                 <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets" p-id="562" data-spm-anchor-id="a313x.home_2025.i1.i2.58a33a81RuvY02">
-                                    <div class="swiper-pagination-bullet custom-tab-bullet swiper-pagination-bullet-active" data-tab="0" tabindex="0" role="button" aria-label="Go to slide 1">
+                                    
+                                    <div class="swiper-pagination-bullet custom-tab-bullet swiper-pagination-bullet-active" role="button" aria-label="Go to slide 1">
                                         搜索
                                     </div>
-                                    <div class="swiper-pagination-bullet custom-tab-bullet" data-tab="1" tabindex="0" role="button" aria-label="Go to slide 2">
+
+                                    <div class="swiper-pagination-bullet custom-tab-bullet" tabindex="0" role="button" aria-label="Go to slide 2">
                                         AI 生成图标
                                     </div>
+                                
                                 </div>
                                 <div class="swiper-wrapper" p-id="564" style="height: 58px;">
                                     <div class="swiper-slide swiper-slide-active" p-id="565" style="width: 1020px; opacity: 1; transform: translate3d(0px, 0px, 0px);">
@@ -277,11 +264,11 @@
                     <div class="wrap homewrap" p-id="18">
                         <div class="foot-left" p-id="19">
                             <span class="foot-logo" p-id="20" data-spm-anchor-id="a313x.home_2025.i7.i0.58a33a81YLtEJM">
-                                <img src="https://img.alicdn.com/imgextra/i2/O1CN01uQaD1S1lWoaCDLwFE_!!6000000004827-2-tps-258-64.png" alt="iconfont Logo">
+                                <img src="web_assets/web_logo.svg" alt="iconfont Logo">
                             </span>
                             
                             <div class="foot-content" p-id="22">
-                                阿里妈妈MUX倾力打造的矢量图标管理、交流平台。<br p-id="24">
+                                阿里妈妈MUX倾力打造的矢量图标管理、交流平台。<br>
                                 设计师将图标上传到 iconfont 平台，用户可以自定义下载多种格式的icon，平台也可将图标转换为字体，便于前端工程师自由调整与调用。
                             </div>
                             
@@ -338,5 +325,21 @@
             </footer>
     </div>
 </div>
+
+<div id="J_block_car_container" class="block-car-container">
+    <div class="car-top">
+        <span class="top-back iconfont icon-right">
+
+        </span>
+    </div>
+    <div class="icons-container"></div>
+    <div class="car-bottom"></div>
+</div>
+    
+ <!-- 遮罩层 -->
+<div id="overlay" class="overlay"></div>
+
+</div>
+
 </body>
 </html>

@@ -1,0 +1,88 @@
+body {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    font-family: tahoma,"microsoft yahei",微软雅黑!important;
+}
+
+header {
+    text-align: center;
+    font-size: 24px;
+}
+
+.wrap {
+    margin: 0px auto;
+}
+
+.homewrap {
+    max-width: 1350px;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    height: 55px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+}
+
+img {
+    border: 0 none;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    vertical-align: top;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+    width: 125px;
+    margin-right: 40px;
+}
+
+.logo img {
+    width: 150px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* 实现logo随着网页宽度缩小而缩小 */
+@media (max-width: 800px) {
+    .logo {
+        display: none;
+    }
+    
+    /* 小屏幕下添加白色下边框 */
+    header {
+        border-bottom: 1px solid white;
+    }
+}
+
+@media (min-width: 801px) and (max-width: 920px) {
+    .logo img {
+        width: calc(125px * ((100vw - 801px) / (920px - 801px)));
+        height: calc(33px * ((100vw - 801px) / (920px - 801px)));
+        transform-origin: left center;
+    }
+}
+
+@media (min-width: 921px) {
+    .logo img {
+        width: 125px;
+        height: 33px;
+    }
+}
+
+header .site-nav nav>ul {
+    display: flex;
+}
+
+li.nav-item.current{
+    color: red;
+    background-image: linear-gradient(106deg, rgb(170, 252, 137) 0px, rgb(0, 249, 229) 44%, rgb(45, 96, 255) 100%);
+    background-clip: text;
+}
