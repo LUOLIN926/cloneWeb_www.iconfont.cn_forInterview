@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>www.iconfont.cn_clone</title>
 
-    <link rel="stylesheet" href="./00_basic.css">
-    <link rel="stylesheet" href="./001.css">
-    <link rel="stylesheet" href="./101.css">
+    <link rel="stylesheet" href="./css/00_basic.css">
+    <link rel="stylesheet" href="./css/001.css">
+    <link rel="stylesheet" href="./css/101.css">
+    <link rel="stylesheet" href="./css/slogan.css">
+    <link rel="stylesheet" href="./css/search.css">
+    <link rel="stylesheet" href="./css/car.css">
     <link rel="stylesheet" href="./iconfont/iconfont.css">
-    <link rel="stylesheet" href="./car.css">
 
     <script src="./search.js"></script>
     <script src="./car.js"></script>
@@ -180,8 +182,10 @@
             </div>
         </header>
     </div>
+    
     <div mx-view="app/views/common/sidebar" id="magix_vf_sidebar" data-spm="i6">
     </div>
+    
     <div class="main" data-spm="i1">
         <main>
             <div id="inmain" class="inmain inmain-padding">
@@ -195,7 +199,8 @@
                          </div>
                          <div class="search-wrap">
                             <div class="search-main">
-                                <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets" p-id="562" data-spm-anchor-id="a313x.home_2025.i1.i2.58a33a81RuvY02">
+                                <!-- 选择‘搜索’或者‘ai生成图标’ -->
+                                <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
                                     
                                     <div class="swiper-pagination-bullet custom-tab-bullet swiper-pagination-bullet-active" role="button" aria-label="Go to slide 1">
                                         搜索
@@ -206,50 +211,54 @@
                                     </div>
                                 
                                 </div>
-                                <div class="swiper-wrapper" p-id="564" style="height: 58px;">
-                                    <div class="swiper-slide swiper-slide-active" p-id="565" style="width: 1020px; opacity: 1; transform: translate3d(0px, 0px, 0px);">
-                                        <div class="search-tab-content search-box" p-id="566">
-                                            <div class="search-drop" id="J_search-box" p-id="567">
-                                                <div class="search-text-box" mx-click="toggle()" p-id="568">
-                                                    <span class="search-tab-text" p-id="569">
-                                                        <span p-id="570">
+                                <!-- 搜索框 -->
+                                <div class="section swiper-container swiper-container-fade swiper-container-initialized swiper-container-horizontal swiper-container-autoheight" style="width: 1020px; opacity: 1; transform: translate3d(0px, 0px, 0px);">
+                                    <div class="swiper-wrapper" style="height: 58px;">
+                                        <div class="swiper-slide swiper-slide-active" p-id="565" style="width: 1020px; opacity: 1; transform: translate3d(0px, 0px, 0px);">
+                                            <div class="search-tab-content search-box" p-id="566">
+                                                <div class="search-drop" id="J_search-box" p-id="567">
+                                                    <div class="search-text-box" mx-click="toggle()" p-id="568">
+                                                        <span class="search-tab-text" p-id="569">
+                                                            <span p-id="570">
+                                                                图标
+                                                            </span>
+                                                        </span>
+                                                        <span class="iconfont dropdown-arrow" p-id="571">
+                                                            <svg t="1762173215475" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4634" width="13" height="13"><path d="M512 664.124l395.825-395.522c16.816-16.803 44.08-16.803 60.896 0 16.816 16.803 16.816 44.047 0 60.85L542.448 755.398c-16.816 16.803-44.08 16.803-60.896 0L55.279 329.452c-16.816-16.803-16.816-44.047 0-60.85 16.816-16.803 44.08-16.803 60.896 0L512 664.124z" fill="#555555" p-id="4635"></path></svg>
+                                                        </span>
+                                                    </div>
+                                                    <div class="search-dropdown" mx-click="selectTab()" p-id="573">
+                                                        <div data-type="icon" p-id="574">
                                                             图标
-                                                        </span>
-                                                    </span>
-                                                    <span class="iconfont dropdown-arrow" p-id="571">
-                                                        
-                                                    </span>
-                                                </div>
-                                                <div class="search-dropdown" mx-click="selectTab()" p-id="573">
-                                                    <div data-type="icon" p-id="574">
-                                                        图标
-                                                    </div>
-                                                    <div data-type="illustration" p-id="576">
-                                                        插画
+                                                        </div>
+                                                        <div data-type="illustration" p-id="576">
+                                                            插画
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="search-input-cover" id="J_search_input_wrap" mx-click="clickInputWrap()" p-id="578">
-                                                <div class="search-input-cover-inner" p-id="579">
-                                                    请输入图标关键词，在
-                                                    <span class="num" p-id="581">
-                                                        <span p-id="582">
-                                                            31,824,585
+                                                <div class="search-input-cover" id="J_search_input_wrap" mx-click="clickInputWrap()" p-id="578">
+                                                    <div class="search-input-cover-inner" p-id="579">
+                                                        请输入图标关键词，在
+                                                        <span class="num" p-id="581">
+                                                            <span p-id="582">
+                                                                31,824,585
+                                                            </span>
                                                         </span>
-                                                    </span>
-                                                    个图标中搜索
+                                                        个图标中搜索
+                                                    </div>
+                                                </div>
+                                                <!-- 搜索按钮 -->
+                                                <div class="chameleon" mx-click="goSearch()" p-id="585">
                                                 </div>
                                             </div>
-                                            <!-- 搜索按钮 -->
-                                            <div class="chameleon" mx-click="goSearch()" p-id="585">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>            
+                </div> 
+            </div>           
         </main>
     </div>
 
@@ -328,9 +337,7 @@
 
 <div id="J_block_car_container" class="block-car-container">
     <div class="car-top">
-        <span class="top-back iconfont icon-right">
-
-        </span>
+        <span class="top-back iconfont icon-right" id="close-cart-btn" style="cursor: pointer;"></span>
     </div>
     <div class="icons-container"></div>
     <div class="car-bottom"></div>

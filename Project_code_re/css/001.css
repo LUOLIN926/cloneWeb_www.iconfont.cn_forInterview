@@ -152,93 +152,12 @@ header .site-nav .quick-menu>ul {
 
 /* 主体部分 */
 main {
-    background-color: red; /* 设置主体背景为红色 */
+    background-color: black; /* 设置主体背景为红色 */
     padding: 20px 0; /* 添加内边距使内容不紧贴边缘 */
     text-align: center; /* 居中显示图片 */
 }
 
-/* slogan区域 */
-.page-home {
-    position: relative;
-    overflow: hidden;
-    /* min-height: 750px; */
-    background-color: #000;
-}
 
-.page-home .slogan {
-    text-align: center;
-    color: #fff;
-    padding-top: 46px;
-}
-
-.page-home .slogan h1 {
-    font-size: 42px;
-    color: #FFF;
-    display:inline-block
-}
-
-.page-home .slogan h2 {
-    font-size: 18px
-}
-
-/* 搜索区域 */
-.page-home .search-wrap {
-    margin-top: 45px;
-    text-align: center;
-}
-
-.page-home .search-main {
-    position: relative;
-    width: 1020px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 20px;
-}
-
-.swiper-pagination {
-    position: absolute;
-    text-align: center;
-    -webkit-transition: .3s opacity;
-    -o-transition: .3s opacity;
-    transition: .3s opacity;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    z-index: 10;
-}
-
-.page-home .search-main .swiper-pagination {
-position: relative;
-display: flex;
-gap: 12px;
-padding: 5px 0;
-margin-bottom: 10px;
-box-sizing: border-box;
-}
-
-.page-home .search-main .swiper-pagination-bullet {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    height: 32px;
-    padding: 0 18px;
-    font-size: 16px;
-    color: #fff;
-    border-radius: 9999px;
-    background: 0 0;
-    background:rgba(255, 255, 255, .05);
-    cursor: pointer;/* 将鼠标光标设置为指针样式 */
-    transition: all 0.3s ease;
-    user-select: none;/* 禁止用户选中文本 */
-}
-
-.page-home .search-main .swiper-pagination-bullet-active {
-    border: none;
-    color: #000;
-    background-color: #00F9E5;
-    background-image: linear-gradient(110deg, #AAFC89, #00F9E5 44%, #2D60FF);
-    border-radius: 999px;
-}
 
 /* footer */
 

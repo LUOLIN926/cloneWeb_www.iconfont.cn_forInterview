@@ -415,3 +415,38 @@
 .block-car-container.show-project .car-manage-project.show-add .project-new, .block-car-container.show-sucai .car-manage-sucai {
     display:block
 }
+
+/* 清空购物车按钮样式 */
+.block-car-container .car-top .btn-clean-all {
+    font-size: 12px;
+    color: rgba(255, 255, 255, .5);
+    cursor: pointer;
+    margin-right: 10px; /* 改为右边距 */
+    margin-left: auto; /* 推到右边 */
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.block-car-container .car-top .btn-clean-all .iconfont {
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.block-car-container .car-top .btn-clean-all:hover {
+    color: #fff;
+}
+
+/* 购物车为空时的样式 */
+.block-car-container .icons-container .no-result {
+    margin-top: 64px;
+    width: 170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.block-car-container .icons-container .no-result-message {
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+}

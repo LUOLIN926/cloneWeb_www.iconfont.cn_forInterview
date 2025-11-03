@@ -39,6 +39,13 @@
       "font_class": "notice",
       "unicode": "e51b",
       "unicode_decimal": 58651
+    },
+    {
+      "icon_id": "23754198",
+      "name": "icon-clean",
+      "font_class": "icon-clean",
+      "unicode": "e686",
+      "unicode_decimal": 59014
     }
   ]
 }

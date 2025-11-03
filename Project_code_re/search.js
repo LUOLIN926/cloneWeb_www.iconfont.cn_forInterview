@@ -24,4 +24,45 @@ document.addEventListener('DOMContentLoaded', function() {
             aiTab.classList.add('swiper-pagination-bullet-active');
         });
     }
+    
+    // 添加搜索下拉框的点击功能
+    const searchDrop = document.querySelector('.search-drop');
+    const searchDropdown = document.querySelector('.search-dropdown');
+    
+    if (searchDrop && searchDropdown) {
+        // 点击搜索下拉框时切换显示/隐藏
+        searchDrop.addEventListener('click', function(e) {
+            // 阻止事件冒泡，避免点击文档其他地方时立即关闭
+            e.stopPropagation();
+            
+            // 切换 dropdown-open 类
+            this.classList.toggle('dropdown-open');
+        });
+        
+        // 点击下拉选项时关闭下拉框
+        const dropdownItems = searchDropdown.querySelectorAll('div[data-type]');
+        dropdownItems.forEach(item => {
+            item.addEventListener('click', function() {
+                // 移除 dropdown-open 类以关闭下拉框
+                searchDrop.classList.remove('dropdown-open');
+                
+                // 可以在这里添加选择项的处理逻辑
+                const selectedType = this.getAttribute('data-type');
+                const selectedText = this.textContent.trim();
+                
+                // 更新显示文本
+                const searchText = searchDrop.querySelector('.search-tab-text span');
+                if (searchText) {
+                    searchText.textContent = selectedText;
+                }
+            });
+        });
+        
+        // 点击页面其他地方时关闭下拉框
+        document.addEventListener('click', function(e) {
+            if (searchDrop.classList.contains('dropdown-open')) {
+                searchDrop.classList.remove('dropdown-open');
+            }
+        });
+    }
 });
