@@ -152,8 +152,8 @@ header .site-nav .quick-menu>ul {
 
 /* 主体部分 */
 main {
-    background-color: black; /* 设置主体背景为红色 */
-    padding: 20px 0; /* 添加内边距使内容不紧贴边缘 */
+    background-color: black;
+    padding: 0 0; 
     text-align: center; /* 居中显示图片 */
 }
 
@@ -283,4 +283,19 @@ main {
 
 .footer .foot-right .share-logos .share-logo:hover .weixin-code {
     display:inline-block
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    height: 32px;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    box-sizing: border-box;
 }

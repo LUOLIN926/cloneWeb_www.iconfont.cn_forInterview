@@ -60,6 +60,13 @@ img {
     -ms-interpolation-mode: bicubic;
 }
 
+video {
+    display: block;
+    max-width: 100%;
+    object-fit: contain;
+    content: normal;
+}
+
 body {
     font-size: 12px;
     font-family: tahoma, "microsoft yahei", sans-serif !important;

@@ -212,7 +212,7 @@
                                 
                                 </div>
                                 <!-- 搜索框 -->
-                                <div class="section swiper-container swiper-container-fade swiper-container-initialized swiper-container-horizontal swiper-container-autoheight" style="width: 1020px; opacity: 1; transform: translate3d(0px, 0px, 0px);">
+                                <div class="section swiper-container swiper-container-fade swiper-container-initialized swiper-container-horizontal swiper-container-autoheight" id="swiper-container-search">
                                     <div class="swiper-wrapper" style="height: 58px;">
                                         <div class="swiper-slide swiper-slide-active" p-id="565" style="width: 1020px; opacity: 1; transform: translate3d(0px, 0px, 0px);">
                                             <div class="search-tab-content search-box" p-id="566">
@@ -241,7 +241,7 @@
                                                         请输入图标关键词，在
                                                         <span class="num" p-id="581">
                                                             <span p-id="582">
-                                                                31,824,585
+                                                                114,514,666
                                                             </span>
                                                         </span>
                                                         个图标中搜索
@@ -249,12 +249,603 @@
                                                 </div>
                                                 <!-- 搜索按钮 -->
                                                 <div class="chameleon" mx-click="goSearch()" p-id="585">
+                                                    <svg t="1762238742721" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4900" width="32" height="45"><path d="M473.142857 54.514286c-231.2 0-418.742857 187.428571-418.742857 418.742857 0 231.2 187.428571 418.742857 418.742857 418.742857 102.742857 0 196.8-37.028571 269.6-98.285714L918.171429 969.142857l50.514285-50.514286-175.428571-175.657142c61.485714-72.914286 98.514286-167.085714 98.514286-269.828572 0.114286-231.2-187.428571-418.628571-418.628572-418.628571z m0 765.828571c-46.857143 0-92.342857-9.142857-135.085714-27.2-41.371429-17.485714-78.514286-42.514286-110.4-74.4-31.885714-31.885714-56.914286-69.028571-74.4-110.4-18.057143-42.742857-27.2-88.228571-27.2-135.085714s9.142857-92.342857 27.2-135.085714c17.485714-41.371429 42.514286-78.514286 74.4-110.4 31.885714-31.885714 69.028571-56.914286 110.4-74.4 42.742857-18.057143 88.228571-27.2 135.085714-27.2s92.342857 9.142857 135.085714 27.2c41.371429 17.485714 78.514286 42.514286 110.4 74.4 31.885714 31.885714 56.914286 69.028571 74.4 110.4 18.057143 42.742857 27.2 88.228571 27.2 135.085714s-9.142857 92.342857-27.2 135.085714c-17.485714 41.371429-42.514286 78.514286-74.4 110.4s-69.028571 56.914286-110.4 74.4c-42.742857 18.057143-88.228571 27.2-135.085714 27.2z" fill="#999999" p-id="4901"></path></svg>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="rec-cards clearfix show-cards">
+                                <div class="cards-bg">
+                                    <div class="tabs-btn">
+                                        <ul>
+                                            <li class="tab-btn current">
+                                                <a>
+                                                    <div class="tab-icon">
+                                                        <span class="iconfont icon-gouwuche"></span>
+                                                    </div>
+                                                    <div class="tab-text">
+                                                        图标库
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="tab-btn">
+                                                <a>
+                                                    <div class="tab-icon">
+                                                        <span class="iconfont icon-gouwuche"></span>
+                                                    </div>
+                                                    <div class="tab-text">
+                                                        矢量插画库
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="tab-btn">
+                                                <a>
+                                                    <div class="tab-icon">
+                                                        <span class="iconfont icon-gouwuche"></span>
+                                                    </div>
+                                                    <div class="tab-text">
+                                                        3D插画库
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="tab-btn">
+                                                <a>
+                                                    <div class="tab-icon">
+                                                        <span class="iconfont icon-gouwuche"></span>
+                                                    </div>
+                                                    <div class="tab-text">
+                                                        动效库
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="tab-btn">
+                                                <a>
+                                                    <div class="tab-icon">
+                                                        <span class="iconfont icon-gouwuche"></span>
+                                                    </div>
+                                                    <div class="tab-text">
+                                                        字体库
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-content">
+                                        <div id="J_iconRecommendCollections" class="recommendContent current">
+                                            <div class="rec-card">
+                                                <a href="" class="rec-avatar">
+                                                    <span class="avatar avatar-small">
+                                                        <img src="./web_assets/avatar.png">
+                                                    </span>
+                                                    <div class="rec-title">
+                                                        <span>user123</span>
+                                                    </div>
+                                                    <div class="rec-like">
+                                                        <span class="iconfont icon-gouwuche"></span>
+                                                        <span>886</span>
+                                                    </div>
+                                                </a>
+                                                <a href="" class="rec-content">
+                                                    <ul class="rec-lists">
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                    </ul>
+                                                </a>
+                                            </div>
+                                            <div class="rec-card">
+                                                <a href="" class="rec-avatar">
+                                                    <span class="avatar avatar-small">
+                                                        <img src="./web_assets/avatar.png">
+                                                    </span>
+                                                    <div class="rec-title">
+                                                        <span>user123</span>
+                                                    </div>
+                                                    <div class="rec-like">
+                                                        <span class="iconfont icon-gouwuche"></span>
+                                                        <span>886</span>
+                                                    </div>
+                                                </a>
+                                                <a href="" class="rec-content">
+                                                    <ul class="rec-lists">
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                    </ul>
+                                                </a>
+                                            </div>
+                                            <div class="rec-card">
+                                                <a href="" class="rec-avatar">
+                                                    <span class="avatar avatar-small">
+                                                        <img src="./web_assets/avatar.png">
+                                                    </span>
+                                                    <div class="rec-title">
+                                                        <span>user123</span>
+                                                    </div>
+                                                    <div class="rec-like">
+                                                        <span class="iconfont icon-gouwuche"></span>
+                                                        <span>886</span>
+                                                    </div>
+                                                </a>
+                                                <a href="" class="rec-content">
+                                                    <ul class="rec-lists">
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                    </ul>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div id="J_illustrationsRecommendCollections" class="recommendContent">
+                                            <div class="rec-card">
+                                                <a href="" class="rec-avatar">
+                                                    <span class="avatar avatar-small">
+                                                        <img src="./web_assets/avatar.png">
+                                                    </span>
+                                                    <div class="rec-title">
+                                                        <span>user9876</span>
+                                                    </div>
+                                                    <div class="rec-like">
+                                                        <span class="iconfont icon-gouwuche"></span>
+                                                        <span>886</span>
+                                                    </div>
+                                                </a>
+                                                <a href="" class="rec-content">
+                                                    <ul class="rec-lists">
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                    </ul>
+                                                </a>
+                                            </div>
+                                            <div class="rec-card">
+                                                <a href="" class="rec-avatar">
+                                                    <span class="avatar avatar-small">
+                                                        <img src="./web_assets/avatar.png">
+                                                    </span>
+                                                    <div class="rec-title">
+                                                        <span>user123</span>
+                                                    </div>
+                                                    <div class="rec-like">
+                                                        <span class="iconfont icon-gouwuche"></span>
+                                                        <span>886</span>
+                                                    </div>
+                                                </a>
+                                                <a href="" class="rec-content">
+                                                    <ul class="rec-lists">
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                    </ul>
+                                                </a>
+                                            </div>
+                                            <div class="rec-card">
+                                                <a href="" class="rec-avatar">
+                                                    <span class="avatar avatar-small">
+                                                        <img src="./web_assets/avatar.png">
+                                                    </span>
+                                                    <div class="rec-title">
+                                                        <span>user123</span>
+                                                    </div>
+                                                    <div class="rec-like">
+                                                        <span class="iconfont icon-gouwuche"></span>
+                                                        <span>886</span>
+                                                    </div>
+                                                </a>
+                                                <a href="" class="rec-content">
+                                                    <ul class="rec-lists">
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                    </ul>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div id="J_illustrations3DRecommendCollections" class="recommendContent">
+                                            <div class="rec-card">
+                                                <a href="" class="rec-avatar">
+                                                    <span class="avatar avatar-small">
+                                                        <img src="./web_assets/avatar.png">
+                                                    </span>
+                                                    <div class="rec-title">
+                                                        <span>user123</span>
+                                                    </div>
+                                                    <div class="rec-like">
+                                                        <span class="iconfont icon-gouwuche"></span>
+                                                        <span>886</span>
+                                                    </div>
+                                                </a>
+                                                <a href="" class="rec-content">
+                                                    <ul class="rec-lists">
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                    </ul>
+                                                </a>
+                                            </div>
+                                            <div class="rec-card">
+                                                <a href="" class="rec-avatar">
+                                                    <span class="avatar avatar-small">
+                                                        <img src="./web_assets/avatar.png">
+                                                    </span>
+                                                    <div class="rec-title">
+                                                        <span>user123</span>
+                                                    </div>
+                                                    <div class="rec-like">
+                                                        <span class="iconfont icon-gouwuche"></span>
+                                                        <span>886</span>
+                                                    </div>
+                                                </a>
+                                                <a href="" class="rec-content">
+                                                    <ul class="rec-lists">
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                    </ul>
+                                                </a>
+                                            </div>
+                                            <div class="rec-card">
+                                                <a href="" class="rec-avatar">
+                                                    <span class="avatar avatar-small">
+                                                        <img src="./web_assets/avatar.png">
+                                                    </span>
+                                                    <div class="rec-title">
+                                                        <span>user123</span>
+                                                    </div>
+                                                    <div class="rec-like">
+                                                        <span class="iconfont icon-gouwuche"></span>
+                                                        <span>886</span>
+                                                    </div>
+                                                </a>
+                                                <a href="" class="rec-content">
+                                                    <ul class="rec-lists">
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                    </ul>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div id="J_lottieRecommendCollections" class="recommendContent">
+                                            <div class="rec-card">
+                                                <a href="" class="rec-avatar">
+                                                    <span class="avatar avatar-small">
+                                                        <img src="./web_assets/avatar.png">
+                                                    </span>
+                                                    <div class="rec-title">
+                                                        <span>user123</span>
+                                                    </div>
+                                                    <div class="rec-like">
+                                                        <span class="iconfont icon-gouwuche"></span>
+                                                        <span>886</span>
+                                                    </div>
+                                                </a>
+                                                <a href="" class="rec-content">
+                                                    <ul class="rec-lists">
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                    </ul>
+                                                </a>
+                                            </div>
+                                            <div class="rec-card">
+                                                <a href="" class="rec-avatar">
+                                                    <span class="avatar avatar-small">
+                                                        <img src="./web_assets/avatar.png">
+                                                    </span>
+                                                    <div class="rec-title">
+                                                        <span>user123</span>
+                                                    </div>
+                                                    <div class="rec-like">
+                                                        <span class="iconfont icon-gouwuche"></span>
+                                                        <span>886</span>
+                                                    </div>
+                                                </a>
+                                                <a href="" class="rec-content">
+                                                    <ul class="rec-lists">
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                    </ul>
+                                                </a>
+                                            </div>
+                                            <div class="rec-card">
+                                                <a href="" class="rec-avatar">
+                                                    <span class="avatar avatar-small">
+                                                        <img src="./web_assets/avatar.png">
+                                                    </span>
+                                                    <div class="rec-title">
+                                                        <span>user123</span>
+                                                    </div>
+                                                    <div class="rec-like">
+                                                        <span class="iconfont icon-gouwuche"></span>
+                                                        <span>886</span>
+                                                    </div>
+                                                </a>
+                                                <a href="" class="rec-content">
+                                                    <ul class="rec-lists">
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                    </ul>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div id="J_fontRecommendCollections" class="recommendContent">
+                                            <div class="rec-card">
+                                                <a href="" class="rec-avatar">
+                                                    <span class="avatar avatar-small">
+                                                        <img src="./web_assets/avatar.png">
+                                                    </span>
+                                                    <div class="rec-title">
+                                                        <span>user123</span>
+                                                    </div>
+                                                    <div class="rec-like">
+                                                        <span class="iconfont icon-gouwuche"></span>
+                                                        <span>886</span>
+                                                    </div>
+                                                </a>
+                                                <a href="" class="rec-content">
+                                                    <ul class="rec-lists">
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                    </ul>
+                                                </a>
+                                            </div>
+                                            <div class="rec-card">
+                                                <a href="" class="rec-avatar">
+                                                    <span class="avatar avatar-small">
+                                                        <img src="./web_assets/avatar.png">
+                                                    </span>
+                                                    <div class="rec-title">
+                                                        <span>user123</span>
+                                                    </div>
+                                                    <div class="rec-like">
+                                                        <span class="iconfont icon-gouwuche"></span>
+                                                        <span>886</span>
+                                                    </div>
+                                                </a>
+                                                <a href="" class="rec-content">
+                                                    <ul class="rec-lists">
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                    </ul>
+                                                </a>
+                                            </div>
+                                            <div class="rec-card">
+                                                <a href="" class="rec-avatar">
+                                                    <span class="avatar avatar-small">
+                                                        <img src="./web_assets/avatar.png">
+                                                    </span>
+                                                    <div class="rec-title">
+                                                        <span>user123</span>
+                                                    </div>
+                                                    <div class="rec-like">
+                                                        <span class="iconfont icon-gouwuche"></span>
+                                                        <span>886</span>
+                                                    </div>
+                                                </a>
+                                                <a href="" class="rec-content">
+                                                    <ul class="rec-lists">
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                        <li class="rec-icon"><span class="iconfont icon-gouwuche"></span></li>
+                                                    </ul>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- AI 图标一键生成 -->
+                            <div class="section hidden-mobile">
+                                <div class="section-content">
+                                    <h2 class="title">
+                                        AI 图标一键生成
+                                    </h2>
+                                    <div class="ai-icon-list">
+                                        <a href="" class="ai-icon-item">
+                                            <span class="ai-icon-title">纤巧线性风格</span>
+                                            <img src="./web_assets/search/ai_icon_1.webp" alt="" p-id="679">
+                                        </a>
+                                        <a href="" class="ai-icon-item">
+                                            <span class="ai-icon-title">常规线性风格</span>
+                                            <img src="./web_assets/search/ai_icon_2.webp" alt="" p-id="679">
+                                        </a>
+                                        <a href="" class="ai-icon-item">
+                                            <span class="ai-icon-title">浑厚线性风格</span>
+                                            <img src="./web_assets/search/ai_icon_3.webp" alt="" p-id="679">
+                                        </a>
+                                        <a href="" class="ai-icon-item">
+                                            <span class="ai-icon-title">简约面性风格</span>
+                                            <img src="./web_assets/search/ai_icon_4.webp" alt="" p-id="679">
+                                        </a>
+                                        <a href="" class="ai-icon-item">
+                                            <span class="ai-icon-title" style="bottom: 10px;">更多风格<br>即将上线</span>
+                                            <img src="./web_assets/search/ai_icon_5.webp" alt="" p-id="679">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- AI 工具重磅上新 -->
+                             <div class="section section-ai-tools">
+                                <div class="section-content">
+                                    <h2 class="title">
+                                    AI工具重磅上新
+                                    </h2>
+                                    <ul class="ai-list">
+                                        <li class="ai-list-box">
+                                            <a href="" class="ai-list-item">
+                                                <div class="ai-list-title">
+                                                    <span>AI 生成图标</span>
+                                                </div>
+                                                <div class="btn">开始试用</div>
+                                                <video src="./web_assets/search/video/video_01.mp4"></video>
+                                            </a>
+                                        </li>
+                                        <li class="ai-list-box">
+                                            <a href="" class="ai-list-item">
+                                                <div class="ai-list-title">
+                                                    <span>魔法卡片</span>
+                                                </div>
+                                                <div class="btn">开始试用</div>
+                                                <video src="./web_assets/search/video/video_01.mp4"></video>
+                                            </a>
+                                        </li>
+                                        <li class="ai-list-box">
+                                            <a href="" class="ai-list-item">
+                                                <div class="ai-list-title">
+                                                    <span>智能抠图</span>
+                                                </div>
+                                                <div class="btn">开始试用</div>
+                                                <video src="./web_assets/search/video/video_01.mp4"></video>
+                                            </a>
+                                        </li>
+                                        <li class="ai-list-box">
+                                            <a href="" class="ai-list-item">
+                                                <div class="ai-list-title">
+                                                    <span>尺寸魔方</span>
+                                                </div>
+                                                <div class="btn">开始试用</div>
+                                                <video src="./web_assets/search/video/video_01.mp4"></video>
+                                            </a>
+                                        </li>
+                                        <li class="ai-list-box">
+                                            <a href="" class="ai-list-item">
+                                                <div class="ai-list-title">
+                                                    <span>高清放大</span>
+                                                </div>
+                                                <div class="btn">开始试用</div>
+                                                <video src="./web_assets/search/video/video_01.mp4"></video>
+                                            </a>
+                                        </li>
+                                        <li class="ai-list-box">
+                                            <a href="" class="ai-list-item">
+                                                <div class="ai-list-title">
+                                                    <span>商品图</span>
+                                                </div>
+                                                <div class="btn">开始试用</div>
+                                                <video src="./web_assets/search/video/video_01.mp4"></video>
+                                            </a>
+                                        </li>
+                                        <li class="ai-list-box">
+                                            <a href="" class="ai-list-item">
+                                                <div class="ai-list-title">
+                                                    <span>服饰图</span>
+                                                </div>
+                                                <div class="btn">开始试用</div>
+                                                <video src="./web_assets/search/video/video_01.mp4"></video>
+                                            </a>
+                                        </li>
+                                        <li class="ai-list-box">
+                                            <a href="" class="ai-list-item">
+                                                <div class="ai-list-title">
+                                                    <span>智能试衣</span>
+                                                </div>
+                                                <div class="btn">开始试用</div>
+                                                <video src="./web_assets/search/video/video_01.mp4"></video>
+                                            </a>
+                                        </li>
+                                        <li class="ai-list-box">
+                                            <a href="" class="ai-list-item">
+                                                <div class="ai-list-title">
+                                                    <span>解说视频</span>
+                                                </div>
+                                                <div class="btn">开始试用</div>
+                                                <video src="./web_assets/search/video/video_01.mp4"></video>
+                                            </a>
+                                        </li>
+                                        <li class="ai-list-box">
+                                            <a href="" class="ai-list-item">
+                                                <div class="ai-list-title">
+                                                    <span>标题文案</span>
+                                                </div>
+                                                <div class="btn">开始试用</div>
+                                                <video src="./web_assets/search/video/video_01.mp4"></video>
+                                            </a>
+                                        </li>
+                                        <li class="ai-list-box">
+                                            <a href="" class="ai-list-item">
+                                                <div class="ai-list-title">
+                                                    <span>导购文案</span>
+                                                </div>
+                                                <div class="btn">开始试用</div>
+                                                <video src="./web_assets/search/video/video_01.mp4"></video>
+                                            </a>
+                                        </li>
+                                        <li class="ai-list-box">
+                                            <a href="" class="ai-list-item">
+                                                <div class="ai-list-title">
+                                                    <span>AI 证件照</span>
+                                                </div>
+                                                <div class="btn">开始试用</div>
+                                                <video src="./web_assets/search/video/video_01.mp4"></video>
+                                            </a>
+                                        </li>
+                                        <li class="ai-list-box">
+                                            <a href="" class="ai-list-item">
+                                                <div class="ai-list-title">
+                                                    <span>AI 消除</span>
+                                                </div>
+                                                <div class="btn">开始试用</div>
+                                                <video src="./web_assets/search/video/video_01.mp4"></video>
+                                            </a>
+                                        </li>
+                                        <li class="ai-list-box">
+                                            <a href="" class="ai-list-item">
+                                                <div class="ai-list-title">
+                                                    <span>AI 替换</span>
+                                                </div>
+                                                <div class="btn">开始试用</div>
+                                                <video src="./web_assets/search/video/video_01.mp4"></video>
+                                            </a>
+                                        </li>
+                                        <li class="ai-list-box">
+                                            <a href="" class="ai-list-item">
+                                                <div class="ai-list-title">
+                                                    <span>商品笔记</span>
+                                                </div>
+                                                <div class="btn">开始试用</div>
+                                                <video src="./web_assets/search/video/video_01.mp4"></video>
+                                            </a>
+                                        </li>
+                                        <li class="ai-list-box">
+                                            <a href="" class="ai-list-item">
+                                                <div class="ai-list-title">
+                                                    <span>AI 服饰套图</span>
+                                                </div>
+                                                <div class="btn">开始试用</div>
+                                                <video src="./web_assets/search/video/video_01.mp4"></video>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div style="border-radius: var(--index-radius); overflow: hidden">
+                                                <img src="./web_assets/search/video/video_99.jpg" alt="更多 AI 工具准备中，敬请期待……" p-id="994">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                             </div>
                         </div>
                     </div>
                 </div> 
