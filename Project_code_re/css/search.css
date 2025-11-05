@@ -921,3 +921,173 @@
     display:none
 }
 
+/* 让设计更简单。。。 */
+
+
+.mod-tab-nav {
+    color: #fff;
+    display: flex;
+    justify-content:center
+}
+
+.mod-tab-nav .swiper-slide {
+    width: auto;
+    padding: 12px 22px;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 999px;
+    color: #212121;
+    background-color:#fff
+}
+
+.section-title {
+    /* font-family: "\00963f\0091cc\005988\005988\0065b9\005706\004f53 VF Regular"; */
+    font-variation-settings: 'wght' 700, 'BEVL' 1;
+    font-size: 42px;
+    color: #FFF;
+    text-align: center;
+    margin-bottom: 12px;
+    letter-spacing:2px
+}
+
+.section-subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    color: #FFF;
+    text-align:center
+}
+
+.mod-index-tab {
+    padding: 20px;
+    max-width: 1074px;
+    margin-left: auto;
+    margin-right:auto
+}
+
+.mod-index-tab .apng-canvas {
+    width: 100%;
+    position:relative
+}
+
+.mod-index-tab .feature-description {
+    width:550px
+}
+
+.mod-index-tab #J_index_tab_content_0, .mod-index-tab #J_index_tab_content_1 {
+    display: none;
+    margin-left:100px
+}
+
+.mod-index-tab .primary-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index:8
+}
+
+.mod-index-tab .tab-title {
+    font-size: 16px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space:nowrap
+}
+
+.mod-index-tab .tab-title .iconfont {
+    font-size: 12px;
+    transition:transform .3s ease-in-out
+}
+
+.mod-index-tab .tab-subtitle {
+    display: none;
+    font-size: 12px;
+    color: #fff;
+    margin-top:4px
+}
+
+.mod-index-tab .primary-tabs .tab-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 999px;
+    padding: 2px;
+    box-sizing:border-box
+}
+
+.mod-index-tab .primary-tabs .tab-nav .tab-nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    height: 32px;
+    padding: 0 35px;
+    border-radius: 999px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.mod-index-tab .primary-tabs .tab-nav .tab-nav-item.current {
+    color: #212121;
+    background-color: #fff;
+}
+
+.mod-index-tab .sub-tabs {
+    margin-top: 20px;
+    width: 260px;
+    text-align:left
+}
+
+.mod-index-tab .sub-tabs .tab-nav {
+    display: flex;
+    flex-direction:column
+}
+
+.mod-index-tab .sub-tabs .tab-nav-item {
+    border-bottom: 1px solid var(--index-tab-item-line-color, #666);
+    padding-bottom: 12px;
+    padding-top: 12px;
+    cursor:pointer
+}
+
+.mod-index-tab .sub-tabs .tab-nav-item.current .tab-title {
+    font-size:20px
+}
+
+.mod-index-tab .sub-tabs .tab-nav-item.current .tab-title .iconfont {
+    transform:rotate(90deg)
+}
+
+.mod-index-tab .sub-tabs .tab-nav-item.current .tab-title > span:first-child {
+    color: transparent;
+    background-image: linear-gradient(106deg, #aafc89 0, #00f9e5 44%, #2d60ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight:700
+}
+
+.mod-index-tab .sub-tabs .tab-nav-item.current .tab-subtitle {
+    display:block
+}
+
+.mod-index-tab .tab-content {
+    height: 320px;
+    padding: 24px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://img.alicdn.com/imgextra/i1/O1CN01ME4hKr1if7ALkIfsi_!!6000000004439-2-tps-1528-1000.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size:788px 100%
+}
+
+.mod-index-tab .tab-content .content-area .feature-description h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom:16px
+}

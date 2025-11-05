@@ -167,3 +167,93 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// 实现标签点击切换功能
+document.addEventListener('DOMContentLoaded', function() {
+    // 获取主标签项
+    const tabNavItems = document.querySelectorAll('.primary-tabs .tab-nav-item');
+    
+    // 获取两个内容容器
+    const content0 = document.getElementById('J_index_tab_content_0');
+    const content1 = document.getElementById('J_index_tab_content_1');
+    
+    // 定义状态变量：0表示显示content_0，1表示显示content_1
+    let currentState = 0;
+    
+    // 初始化显示状态
+    function updateContentDisplay() {
+        if (content0 && content1) {
+            if (currentState === 0) {
+                content0.style.display = 'flex';
+                content1.style.display = 'none';
+            } else if (currentState === 1) {
+                content0.style.display = 'none';
+                content1.style.display = 'flex';
+            }
+        }
+    }
+    
+    // 初始化显示
+    updateContentDisplay();
+    
+    // 绑定子标签项点击事件的函数
+    function bindSubTabEvents(contentElement) {
+        if (contentElement) {
+            const tabItems = contentElement.querySelectorAll('.sub-tabs .tab-nav-item');
+            tabItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    tabItems.forEach(tab => {
+                        tab.classList.remove('current');
+                    });
+                    
+                    this.classList.add('current');
+                });
+            });
+        }
+    }
+    
+    // 初始化子标签事件
+    bindSubTabEvents(content0);
+    bindSubTabEvents(content1);
+    
+    // 为每个主标签项添加点击事件监听器
+    tabNavItems.forEach((item, index) => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // 移除所有标签项的current类
+            tabNavItems.forEach(tab => {
+                tab.classList.remove('current');
+            });
+            
+            // 为当前点击的标签项添加current类
+            this.classList.add('current');
+            
+            // 更新状态
+            currentState = index;
+            
+            // 更新内容显示
+            updateContentDisplay();
+        });
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    const tabItems = document.querySelectorAll('.sub-tabs .tab-nav-item');
+    
+    tabItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            tabItems.forEach(tab => {
+                tab.classList.remove('current');
+            });
+            
+            this.classList.add('current');
+        });
+    });
+});
