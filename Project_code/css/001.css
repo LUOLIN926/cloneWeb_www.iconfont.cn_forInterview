@@ -82,6 +82,13 @@
     border-radius: 100px;
 }
 
+header li.nav-tag-wanxiang .nav-item-text:after {
+    content: "";
+    background: url(https://img.alicdn.com/imgextra/i2/O1CN01WaOFaj1z4nDx4Y0mC_!!6000000006661-55-tps-41-12.svg) no-repeat;
+    width: 41px;
+    height:12px
+}
+
 .nav-login {
     display: flex;
     align-items: center;

@@ -267,23 +267,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const content0 = document.getElementById('J_index_tab_content_0');
     const content1 = document.getElementById('J_index_tab_content_1');
     
-    // 初始化显示状态
-    function updateContentDisplay(currentState) {
-        if (content0 && content1) {
-            if (currentState === 0) {
-                content0.classList.add('active');
-                content1.classList.remove('active');
-                // 显示第一个子tab的媒体内容 (索引0)
-                switchMediaDisplay(0);
-            } else if (currentState === 1) {
-                content0.classList.remove('active');
-                content1.classList.add('active');
-                // 显示第一个子tab的媒体内容 (索引5)
-                switchMediaDisplay(5);
-            }
-        }
-    }
-    
     // 切换媒体显示
     function switchMediaDisplay(tabIndex) {
         // 隐藏所有媒体元素
@@ -327,12 +310,35 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // 初始化显示第一个内容区域
-    updateContentDisplay(0);
+    // 重置子标签到第一个选项
+    function resetSubTabsToFirst(contentElement) {
+        if (contentElement) {
+            const tabItems = contentElement.querySelectorAll('.sub-tabs .tab-nav-item');
+            // 设置第一个子标签为current，移除其他子标签的current类
+            tabItems.forEach((tab, index) => {
+                if (index === 0) {
+                    tab.classList.add('current');
+                } else {
+                    tab.classList.remove('current');
+                }
+            });
+        }
+    }
     
-    // 初始化子标签事件
-    bindSubTabEvents(content0, 0);
-    bindSubTabEvents(content1, 5);
+    // 显示指定内容区域
+    function showContent(contentToShow, contentToHide, activeTabIndex) {
+        if (contentToShow && contentToHide) {
+            // 使用CSS类来控制显示/隐藏
+            contentToShow.classList.add('active');
+            contentToHide.classList.remove('active');
+            
+            // 重置子标签到第一个选项
+            resetSubTabsToFirst(contentToShow);
+            
+            // 显示对应的媒体内容
+            switchMediaDisplay(activeTabIndex);
+        }
+    }
     
     // 为每个主标签项添加点击事件监听器
     tabNavItems.forEach((item, index) => {
@@ -347,8 +353,28 @@ document.addEventListener('DOMContentLoaded', function() {
             // 为当前点击的标签项添加current类
             this.classList.add('current');
             
-            // 更新内容显示
-            updateContentDisplay(index);
+            // 根据点击的标签索引切换内容
+            if (index === 0) {
+                // 点击"使用指南"
+                showContent(content0, content1, 0);
+            } else if (index === 1) {
+                // 点击"素材资产"
+                showContent(content1, content0, 5);
+            }
         });
     });
+    
+    // 初始化子标签事件
+    bindSubTabEvents(content0, 0);
+    bindSubTabEvents(content1, 5);
+    
+    // 初始化显示第一个内容区域
+    if (content0 && content1) {
+        content0.classList.add('active');
+        content1.classList.remove('active');
+        // 重置第一个内容区域的子标签
+        resetSubTabsToFirst(content0);
+        // 显示第一个媒体内容
+        switchMediaDisplay(0);
+    }
 });
