@@ -1086,8 +1086,22 @@
     background-size:788px 100%
 }
 
+.mod-index-tab #J_index_tab_content_1 .tab-content  {
+    background-image: none;
+}
+
 .mod-index-tab .tab-content .content-area .feature-description h3 {
     font-size: 16px;
     color: #333;
     margin-bottom:16px
+}
+
+/* 隐藏所有非当前tab的媒体元素 */
+.preview-video [data-tab] {
+    display: none;
+}
+
+/* 显示当前tab的媒体元素 */
+.preview-video [data-tab].active {
+    display: block;
 }

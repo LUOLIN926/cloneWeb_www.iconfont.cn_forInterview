@@ -257,3 +257,98 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// 实现标签点击切换功能和媒体内容联动
+document.addEventListener('DOMContentLoaded', function() {
+    // 获取主标签项
+    const tabNavItems = document.querySelectorAll('.primary-tabs .tab-nav-item');
+    
+    // 获取两个内容容器
+    const content0 = document.getElementById('J_index_tab_content_0');
+    const content1 = document.getElementById('J_index_tab_content_1');
+    
+    // 初始化显示状态
+    function updateContentDisplay(currentState) {
+        if (content0 && content1) {
+            if (currentState === 0) {
+                content0.classList.add('active');
+                content1.classList.remove('active');
+                // 显示第一个子tab的媒体内容 (索引0)
+                switchMediaDisplay(0);
+            } else if (currentState === 1) {
+                content0.classList.remove('active');
+                content1.classList.add('active');
+                // 显示第一个子tab的媒体内容 (索引5)
+                switchMediaDisplay(5);
+            }
+        }
+    }
+    
+    // 切换媒体显示
+    function switchMediaDisplay(tabIndex) {
+        // 隐藏所有媒体元素
+        const allMediaElements = document.querySelectorAll('.preview-video [data-tab]');
+        allMediaElements.forEach(el => {
+            el.classList.remove('active');
+            el.style.display = 'none';
+        });
+        
+        // 显示当前tab对应的媒体元素
+        const currentMedia = document.querySelector(`.preview-video [data-tab="${tabIndex}"]`);
+        if (currentMedia) {
+            currentMedia.classList.add('active');
+            currentMedia.style.display = 'block';
+        }
+    }
+    
+    // 绑定子tab事件
+    function bindSubTabEvents(contentElement, baseIndex) {
+        if (contentElement) {
+            const tabItems = contentElement.querySelectorAll('.sub-tabs .tab-nav-item');
+            tabItems.forEach((item, index) => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // 移除同级tab项的current类
+                    tabItems.forEach(tab => {
+                        tab.classList.remove('current');
+                    });
+                    
+                    // 为当前点击的tab项添加current类
+                    this.classList.add('current');
+                    
+                    // 计算全局tab索引
+                    const globalTabIndex = baseIndex + index;
+                    
+                    // 切换媒体显示
+                    switchMediaDisplay(globalTabIndex);
+                });
+            });
+        }
+    }
+    
+    // 初始化显示第一个内容区域
+    updateContentDisplay(0);
+    
+    // 初始化子标签事件
+    bindSubTabEvents(content0, 0);
+    bindSubTabEvents(content1, 5);
+    
+    // 为每个主标签项添加点击事件监听器
+    tabNavItems.forEach((item, index) => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // 移除所有标签项的current类
+            tabNavItems.forEach(tab => {
+                tab.classList.remove('current');
+            });
+            
+            // 为当前点击的标签项添加current类
+            this.classList.add('current');
+            
+            // 更新内容显示
+            updateContentDisplay(index);
+        });
+    });
+});
