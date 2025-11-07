@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>www.iconfont.cn_clone</title>
 
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
     <link rel="stylesheet" href="./css/00_basic.css">
     <link rel="stylesheet" href="./css/001.css">
     <link rel="stylesheet" href="./css/101.css">
+    <link rel="stylesheet" href="./css/sidebar.css">
     <link rel="stylesheet" href="./css/slogan.css">
     <link rel="stylesheet" href="./css/search.css">
     <link rel="stylesheet" href="./css/car.css">
-    <link rel="stylesheet" href="./iconfont/iconfont.css">
 
-    <script src="./js/car.js"></script>
+    <script src="./js/sidebar.js"></script>
     <script src="./js/search.js"></script>
+    <script src="./js/car.js"></script>
 </head>
 
 <body class="iconfont-home">
@@ -185,11 +187,23 @@
     
     <!-- 悬浮球 -->
     <div id="magix_vf_sidebar">
-        
+        <div class="block-sidebar" id="J_block_sidebar" style="display: block;">
+            <!-- 购物车 -->
+            <div class="block-sidebar-item iconfont">
+                <span class="iconfont icon-gouwuche" style="color: #000;font-size: 25px;"></span>
+                <!-- 购物车计数器 -->
+                <span id="J_icon_sidebar_count" class="icon-car-count">6</span>
+            </div>
+            <div class="block-sidebar-item iconfont">
+                <span class="iconfont icon-gouwuche" style="color: #000;font-size: 25px;"></span>
+            </div>
+            <!-- 返回顶部 -->
+            <div class="block-sidebar-item iconfont" id="back-to-top" onclick="scrollToTop()">
+                <span class="iconfont icon-gouwuche" style="color: #000;font-size: 25px;"></span>
+            </div>
+        </div>
     </div>
 
-    <div mx-view="app/views/common/sidebar" id="magix_vf_sidebar" data-spm="i6">
-    </div>
     
     <div class="main" data-spm="i1">
         <main>
