@@ -22,6 +22,7 @@
 <body class="iconfont-home">
 <div class="root">
 <div class="wrapper">
+    <!-- 导航栏 -->
     <div id="magix_vf_header">
         <header>
             <!-- 导航容器 -->
@@ -187,7 +188,7 @@
     
     <!-- 悬浮球 -->
     <div id="magix_vf_sidebar">
-        <div class="block-sidebar" id="J_block_sidebar" style="display: block;">
+        <div class="block-sidebar" id="J_block_sidebar" style="display: none;">
             <!-- 购物车 -->
             <div class="block-sidebar-item iconfont">
                 <span class="iconfont icon-gouwuche" style="color: #000;font-size: 25px;"></span>
@@ -204,8 +205,8 @@
         </div>
     </div>
 
-    
-    <div class="main" data-spm="i1">
+    <!-- web主体 -->
+    <div class="main">
         <main>
             <div id="inmain" class="inmain inmain-padding">
                 <div id="magix_vf_main" mx-view="app/views/home/index">
@@ -217,6 +218,7 @@
                             <h2 p-id="556">从素材到 AI 工具，轻松做设计</h2>
                         </div>
                         <div class="search-wrap">
+                            <!-- 搜索框 -->
                             <div class="search-main">
                                 <!-- 选择‘搜索’或者‘ai生成图标’ -->
                                 <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
@@ -275,6 +277,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- 搜索框下卡片 -->
                             <div class="rec-cards clearfix show-cards">
                                 <div class="cards-bg">
                                     <div class="tabs-btn">
@@ -1077,11 +1080,7 @@
         </main>
     </div>
 
-
-
-
-
-
+    <!-- footer版权监管信息 -->
     <div class="footer" id="magix_vf_footer" mx-view="app/views/common/footer" data-spm="i7">
         <footer>
                 <div class="footer" id="magix_vf_footer" mx-view="app/views/common/footer" data-spm="i7" p-id="16">
@@ -1150,6 +1149,7 @@
     </div>
 </div>
 
+<!-- 侧栏购物车 -->
 <div id="J_block_car_container" class="block-car-container">
     <div class="car-top">
         <span class="top-back iconfont icon-right" id="close-cart-btn" style="cursor: pointer;"></span>
@@ -1158,7 +1158,7 @@
     <div class="car-bottom"></div>
 </div>
     
- <!-- 遮罩层 -->
+<!-- 遮罩层 -->
 <div id="overlay" class="overlay"></div>
 
 </div>

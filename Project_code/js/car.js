@@ -1,6 +1,6 @@
 // 购物车功能
 document.addEventListener('DOMContentLoaded', function() {
-    // 获取元素
+
     const cartIcon = document.querySelector('.iconfont.icon-gouwuche');
     const cartContainer = document.getElementById('J_block_car_container');
     const overlay = document.getElementById('overlay');
