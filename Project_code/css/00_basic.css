@@ -112,4 +112,10 @@ h6 {
     font-size:12px
 }
 
+/* 主体部分 */
+main {
+    background-color: black;
+    padding: 0 0; 
+    text-align: center; /* 居中显示图片 */
+}
 
