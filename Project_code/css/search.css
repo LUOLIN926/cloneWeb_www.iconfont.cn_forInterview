@@ -188,7 +188,7 @@
     background-repeat: no-repeat;
     background-position: 238px center, right 160px center;
     background-size: 732px auto, 952px auto;
-    background-image: url("../web_assets/bg1.png"), url("../web_assets/bg2.png");
+    background-image: url("../web_assets/background/bg1.png"), url("../web_assets/background/bg2.png");
     /* 防止遮盖 */
     z-index: auto;
 }

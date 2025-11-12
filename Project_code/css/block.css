@@ -523,8 +523,16 @@
     background-color:#f7f7f7
 }
 
-.block-svg-list li .icon-twrap img, .block-svg-list li .icon-twrap video {
+.block-icon-list li .icon-twrap img, .block-icon-list li .icon-twrap svg {
     max-height:100%
+}
+
+.block-icon-list li .icon-twrap img, .block-icon-list li .icon-twrap svg {
+    width: 36px;
+    height: 36px;
+    vertical-align: middle;
+    fill: currentColor;
+    overflow: hidden;
 }
 
 .block-svg-list li .icon-name {
