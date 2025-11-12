@@ -6,6 +6,111 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "18225725",
+      "name": "购物车满",
+      "font_class": "gouwucheman1",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "34452979",
+      "name": "favorites-fill",
+      "font_class": "favorites-fill",
+      "unicode": "e839",
+      "unicode_decimal": 59449
+    },
+    {
+      "icon_id": "42905921",
+      "name": "布偶猫",
+      "font_class": "buoumao",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    },
+    {
+      "icon_id": "42905924",
+      "name": "边牧",
+      "font_class": "bianmu",
+      "unicode": "e64c",
+      "unicode_decimal": 58956
+    },
+    {
+      "icon_id": "42905925",
+      "name": "法斗",
+      "font_class": "fadou",
+      "unicode": "e64d",
+      "unicode_decimal": 58957
+    },
+    {
+      "icon_id": "42905926",
+      "name": "哈士奇",
+      "font_class": "hashiqi",
+      "unicode": "e64e",
+      "unicode_decimal": 58958
+    },
+    {
+      "icon_id": "42905929",
+      "name": "橘猫",
+      "font_class": "jumao",
+      "unicode": "e64f",
+      "unicode_decimal": 58959
+    },
+    {
+      "icon_id": "42905932",
+      "name": "奶牛猫",
+      "font_class": "nainiumao",
+      "unicode": "e650",
+      "unicode_decimal": 58960
+    },
+    {
+      "icon_id": "42905934",
+      "name": "田园犬",
+      "font_class": "tianyuanquan",
+      "unicode": "e651",
+      "unicode_decimal": 58961
+    },
+    {
+      "icon_id": "42905935",
+      "name": "腊肠犬",
+      "font_class": "lachangquan",
+      "unicode": "e653",
+      "unicode_decimal": 58963
+    },
+    {
+      "icon_id": "42905936",
+      "name": "金毛",
+      "font_class": "jinmao",
+      "unicode": "e654",
+      "unicode_decimal": 58964
+    },
+    {
+      "icon_id": "42905937",
+      "name": "羊",
+      "font_class": "yang",
+      "unicode": "e655",
+      "unicode_decimal": 58965
+    },
+    {
+      "icon_id": "43415613",
+      "name": "黑猫",
+      "font_class": "heimao",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "43415640",
+      "name": "暹罗猫",
+      "font_class": "xianluomao",
+      "unicode": "e657",
+      "unicode_decimal": 58967
+    },
+    {
+      "icon_id": "42905928",
+      "name": "可达鸭",
+      "font_class": "kedaya",
+      "unicode": "e649",
+      "unicode_decimal": 58953
+    },
+    {
       "icon_id": "434756",
       "name": "youjiantou",
       "font_class": "youjiantou",

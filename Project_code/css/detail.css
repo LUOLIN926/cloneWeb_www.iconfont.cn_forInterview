@@ -428,10 +428,11 @@
 
 .block-icon-list li.selected .icon-gouwuche1:before {
     content: '\e642';
+    font-size: 20px;
     color:#00F9E5 !important
 }
 
-.block-icon-list li.favor .icon-shoucang1:before {
+.block-icon-list li.favor .icon-favorites-fill:before {
     content: '\e638';
     color:#00F9E5 !important
 }
