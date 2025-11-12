@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>www.iconfont.cn_clone</title>
 
-    <link rel="stylesheet" href="./iconfont/iconfont.css">
+
     <link rel="stylesheet" href="./font/font.css">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
     <link rel="stylesheet" href="./css/00_basic.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/sidebar.css">
@@ -32,7 +33,7 @@
             <!-- 导航容器 -->
             <div class="site-nav wrap homewrap">
                 <div class="logo">
-                    <a href="/">
+                    <a href="index.html">
                         <img src="web_assets/web_logo.svg" alt="iconfont Logo">
                     </a>
                 </div>
@@ -40,7 +41,7 @@
                 <nav id="nav-main">
                     <ul class="nav-list">
                         <li class="nav-item current">
-                            <a class="nav-item-link" href="">
+                            <a class="nav-item-link" href="index.html">
                                 <div class="nav-item-text">
                                     <span>
                                         首页
@@ -107,7 +108,7 @@
                         <!-- 上传图标 -->
                        <li class="m-my-tab-item">
                             <a href="" class="upload">
-                                <span class="iconfont icon-weibiaoti1"></span>
+                                <span class="iconfont icon-weibiaoti1" style="margin-bottom: 10px;"></span>
                             </a>
                         </li>
 
@@ -118,7 +119,7 @@
 
                         <!-- 购物车图标 -->
                         <li class="m-my-tab-item">
-                            <span class="iconfont icon-gouwuche"></span>
+                            <span class="iconfont icon-gouwuche" style="font-size: 28px;"></span>
                         </li>
 
                         <!-- 通知图标 -->
@@ -198,9 +199,9 @@
             <div class="block-sub-banner-container wrap">
                 <a href="" class="avatar-special">
                     <!-- 头像 -->
-                    <img class="avatar-special-inner" src="./web_assets/avatar.png">
+                    <img class="avatar-special-inner" src="./web_assets/avatar/avatar.png">
                     <!-- 相框 -->
-                    <img class="avatar-special-cover" src="./web_assets/avatar-special-cover.png">
+                    <img class="avatar-special-cover" src="./web_assets/avatar/avatar-special-cover.png">
                 </a>
                 <div class="right-content">
                     <div class="hd cell">
@@ -232,16 +233,16 @@
                                 <div class="block-radius-btn-group clearfix">
                                     <span id="J_radius_search_wrap" class="radius-btn radius-btn-search">
                                         <input id="J_radius_search_input" class="inner-search-input" type="text" placeholder="输入图标名称">
-                                        <span class="iconfont icon-gouwuche" style="color: #fff;"></span>
+                                        <span class="iconfont icon-a-bianzu39" style="color: #fff;font-size: 26px;"></span>
                                     </span>
                                     <span class="radius-btn radius-btn-like">
-                                        <span class="iconfont icon-gouwuche"></span>
+                                        <span class="icon-favorite iconfont"></span>
                                     </span>
                                     <span class="radius-btn radius-btn-share">
-                                        <span class="iconfont icon-gouwuche"></span>
+                                        <span class="iconfont icon-share" style="font-size: 22px;"></span>
                                     </span>
                                     <span class="radius-btn radius-btn-money">
-                                        <span class="iconfont icon-gouwuche"></span>
+                                        <span class="iconfont icon-shang" style="font-size: 26px;"></span>
                                     </span>
                                 </div> 
                             </div>
@@ -318,10 +319,18 @@
                 <!-- 下方四大蓝色按键 -->
                 <div class="block-radius-btns">
                     <div class="block-radius-btn-group clearfix">
-                        <span class="radius-btn radius-btn-dianzan"></span>
-                        <span class="radius-btn radius-btn-like"></span>
-                        <span class="radius-btn radius-btn-share"></span>
-                        <span class="radius-btn radius-btn-money"></span>
+                        <span class="radius-btn radius-btn-dianzan">
+                            <span class="icon-favorite iconfont" style="font-size: 24px;"></span>
+                        </span>
+                        <span class="radius-btn radius-btn-like">
+                            <span class="iconfont icon-shoucang1 cover-item"></span>
+                        </span>
+                        <span class="radius-btn radius-btn-share">
+                            <span class="iconfont icon-share" style="font-size: 22px;"></span>
+                        </span>
+                        <span class="radius-btn radius-btn-money">
+                            <span class="iconfont icon-shang" style="font-size: 26px;"></span>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -332,17 +341,17 @@
     <div id="magix_vf_sidebar">
         <div class="block-sidebar" id="J_block_sidebar" style="display: none;">
             <!-- 购物车 -->
-            <div class="block-sidebar-item iconfont">
+            <div class="block-sidebar-item iconfont" onclick="openCart()">
                 <span class="iconfont icon-gouwuche" style="color: #000;font-size: 25px;"></span>
                 <!-- 购物车计数器 -->
                 <span id="J_icon_sidebar_count" class="icon-car-count">6</span>
             </div>
             <div class="block-sidebar-item iconfont">
-                <span class="iconfont icon-gouwuche" style="color: #000;font-size: 25px;"></span>
+                <span class="iconfont icon-message" style="color: #000;font-size: 21px;"></span>
             </div>
             <!-- 返回顶部 -->
             <div class="block-sidebar-item iconfont" id="back-to-top" onclick="scrollToTop()">
-                <span class="iconfont icon-gouwuche" style="color: #000;font-size: 25px;"></span>
+                <span class="iconfont icon-top" style="color: #000;font-size: 22px;"></span>
             </div>
         </div>
     </div>

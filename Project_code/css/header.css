@@ -84,7 +84,7 @@
 
 header li.nav-tag-wanxiang .nav-item-text:after {
     content: "";
-    background: url(https://img.alicdn.com/imgextra/i2/O1CN01WaOFaj1z4nDx4Y0mC_!!6000000006661-55-tps-41-12.svg) no-repeat;
+    background: url(../web_assets/head/wanxiang.svg) no-repeat;
     width: 41px;
     height:12px
 }
@@ -218,12 +218,8 @@ header .site-nav .quick-menu>ul {
     z-index: 999;
     display: none;
     width: 120px;
-    position: absolute;
-    top: 100%; /* 相对于父元素的100%高度位置 */
-    left: 50%;
-    transform: translateX(-50%); /* 居中对齐 */
-    font-size: var(--site-sub-nav-font-size, 12px);
-    background-color: #000;
+    left: -27px;
+    font-size: var(--site-sub-nav-font-size, 12px)
 }
 
 .head-dropdown li {
@@ -309,7 +305,7 @@ header li.nav-item .head-dropdown {
 }
 
 header li.nav-item-new .nav-item-link:after {
-    background: url(https://img.alicdn.com/imgextra/i4/O1CN01guFAmE1m5cgRF4jSN_!!6000000004903-2-tps-52-24.png) no-repeat;
+    background: url(../web_assets/head/new1.png) no-repeat;
     width: 30px;
     height: 16px;
     background-size: contain;
@@ -322,7 +318,7 @@ header .mod-nav-is-new:after {
     content: "";
     display: inline-block;
     vertical-align: middle;
-    background: url(https://img.alicdn.com/imgextra/i1/O1CN01N6NI211EzKDsXjtGa_!!6000000000422-2-tps-62-28.png) no-repeat;
+    background: url(../web_assets/head/new2.png) no-repeat;
     width: 30px;
     height: 16px;
     background-size: contain;
@@ -338,14 +334,14 @@ header li.nav-tag-ai .nav-item-link:after, header li.nav-tag-wanxiang .nav-item-
 
 header li.nav-tag-ai .nav-item-text:after {
     content: "";
-    background: url(https://img.alicdn.com/imgextra/i3/O1CN011kSVPV1RrcVnvWwhs_!!6000000002165-55-tps-39-12.svg) no-repeat;
+    background: url(../web_assets/head/ai_tool.svg) no-repeat;
     width: 39px;
     height:12px
 }
 
 header li.nav-tag-wanxiang .nav-item-text:after {
     content: "";
-    background: url(https://img.alicdn.com/imgextra/i2/O1CN01WaOFaj1z4nDx4Y0mC_!!6000000006661-55-tps-41-12.svg) no-repeat;
+    background: url(../web_assets/head/wanxiang.svg) no-repeat;
     width: 41px;
     height:12px
 }
@@ -646,7 +642,7 @@ header .site-nav .quick-menu .nickname {
     white-space:nowrap
 }
 
-/* --------- */
+/* 头像区 */
 
 .avatar {
     display: inline-block;
@@ -707,3 +703,153 @@ header .site-nav .quick-menu .nickname {
     top: 0;
     height:130px
 }
+
+/* 素材库下拉框 */
+.library-dropdown,.wanxiang-dropdown {
+    z-index: 999;
+    box-shadow: 0 0 3px 0 #4A54FF;
+}
+
+.library-dropdown {
+    position: absolute;
+    padding: 0;
+    background-color: #1E1E1E;
+    border-radius: 6px 6px 4px 4px;
+    display: none;
+    left: -163px;
+    font-size: 12px;
+    width: 906px;
+    height:398px
+}
+
+.library-dropdown .lib-sub {
+    max-width:180px
+}
+
+.library-dropdown .lib-sub a {
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    height: 38px;
+    line-height: 38px;
+    padding:0 20px
+}
+
+.library-dropdown .lib-sub a:hover {
+    background-color:#0e0e0e
+}
+
+.head-dropdown, .wanxiang-dropdown {
+    position: absolute;
+    background-color:#1E1E1E
+}
+
+.library-dropdown .lib-sub .lib-sub-title {
+    height: auto;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom:11px
+}
+
+.library-dropdown .lib-sub .lib-sub-title div {
+    margin-bottom:5px
+}
+
+.library-dropdown .lib-sub .lib-sub-title img {
+    max-width: 140px;
+    aspect-ratio: 1;
+    border-radius: 8px;
+    display:block
+}
+
+/* AI工具（万象）下拉框 */
+    /* new-tag */
+header .mod-nav-is-new:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    background: url(../web_assets/head/new2.png) no-repeat;
+    width: 30px;
+    height: 16px;
+    background-size: contain;
+    margin-left:5px
+}
+
+.wanxiang-dropdown {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0 36px;
+    left: -163px;
+    border-radius: 6px 6px 4px 4px;
+    font-size: 12px;
+    padding: 0 2em;
+    min-width:630px
+}
+
+.wanxiang-dropdown .lib-footer {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    font-size: 14px;
+    color: #fff;
+    border-top: 1px solid rgba(74, 74, 74, .6);
+    height: 50px;
+    margin-top:12px
+}
+
+.wanxiang-dropdown .lib-footer:after {
+    content: "";
+    background: url(../web_assets/head/wanxiang.svg) no-repeat;
+    width: 41px;
+    height: 12px;
+    margin-left:5px
+}
+
+.wanxiang-dropdown .lib-sub {
+    max-width: 180px;
+    min-width:120px
+}
+
+.wanxiang-dropdown .lib-sub .iconfont {
+    margin-right:.36em
+}
+
+.wanxiang-dropdown .lib-sub a {
+    display: block;
+    color: #B0B0B0;
+    font-size: 14px;
+    height: 38px;
+    line-height: 38px;
+    padding:0
+}
+
+.wanxiang-dropdown .lib-sub a:hover {
+    background: 0 0;
+    color:#fff
+}
+
+.wanxiang-dropdown .lib-sub .lib-sub-title {
+    color: #fff;
+    padding: 0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 8px;
+    margin-bottom: 1px;
+    border-bottom:1px solid rgba(74, 74, 74, .6)
+}
+
+.wanxiang-dropdown .lib-sub .lib-sub-title div {
+    margin-bottom:5px
+}
+
+/* 通知下拉框 */
+.notification-item .head-dropdown ,.quick-menu-avatar .head-dropdown {
+    position: absolute;
+    top: 100%; /* 相对于父元素的100%高度位置 */
+    left: 50%;
+    transform: translateX(-50%); /* 居中对齐 */
+}
+

@@ -849,8 +849,16 @@
   content: "\e629";
 }
 
-/* --- */
+/* detail页面 */
+.icon-favorite:before {
+    content: '\e814'
+}
 
-.icon-upload:before {
-  
+.block-radius-btn-group .radius-btn-like .iconfont {
+  display: block;
+  font-size: 24px;
+}
+
+.icon-youjiantou {
+  font-size: 18px !important;
 }

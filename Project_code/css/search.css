@@ -690,7 +690,11 @@
 .page-home .rec-cards .rec-card .rec-content ul.rec-lists .rec-icon .icon {
     font-size: 36px;
     width: 36px !important;
-    height:36px !important
+    height:36px !important;
+}
+
+.page-home .rec-cards .rec-card .rec-content ul.rec-lists .rec-icon .icon {
+    border-radius: 0 !important;
 }
 
 .page-home .rec-cards .rec-card .block-illustration-list {
