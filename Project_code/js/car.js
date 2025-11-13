@@ -26,12 +26,14 @@ document.addEventListener('DOMContentLoaded', function() {
         carTop.appendChild(clearCartBtn);
     }
     
-    // 打开购物车函数
-    function openCart() {
-        cartContainer.classList.add('show');
-        overlay.classList.add('active');
-        document.body.style.overflow = 'hidden'; // 禁止背景滚动
-    }
+// 打开购物车函数
+function openCart() {
+    cartContainer.classList.add('show');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden'; // 禁止背景滚动
+
+    updateCartCount();
+}
     
     // 关闭购物车函数
     function closeCart() {
@@ -44,16 +46,24 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 300);
     }
     
-    // 清空购物车函数
-    function clearCart() {
-        // 获取购物车内容容器
-        const iconsContainer = cartContainer.querySelector('.icons-container');
-        if (iconsContainer) {
-            // 清空购物车内容
-            iconsContainer.innerHTML = '<div class="no-result"><div class="no-result-message">购物车为空</div></div>';
+// 清空购物车函数
+function clearCart() {
+    sessionStorage.removeItem('iconCart');
+    
+    updateCartCount();
+    
+    // 清除图标的选中状态
+    document.querySelectorAll('.block-icon-list li.selected').forEach(li => {
+        li.classList.remove('selected');
+        const cartIcon = li.querySelector('.icon-gouwuche1.cover-item');
+        if (cartIcon) {
+            cartIcon.classList.remove('icon-gouwuche1');
+            cartIcon.classList.add('icon-gouwuche');
         }
-        console.log('购物车已清空');
-    }
+    });
+    
+    console.log('购物车已清空');
+}
     
     // 打开/关闭购物车侧拉框
     cartIcon.addEventListener('click', function(e) {

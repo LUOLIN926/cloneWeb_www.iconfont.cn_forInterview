@@ -73,7 +73,6 @@ function restoreFavoriteStates() {
     document.querySelectorAll('.block-icon-list li').forEach(li => {
         const iconId = li.querySelector('.icon-name span').textContent;
         
-        // 如果该图标之前被收藏
         if (favorites[iconId]) {
             li.classList.add('favor');
             const favorIcon = li.querySelector('.icon-shoucang1.cover-item');
@@ -92,7 +91,6 @@ function restoreCartStates() {
     document.querySelectorAll('.block-icon-list li').forEach(li => {
         const iconId = li.querySelector('.icon-name span').textContent;
         
-        // 如果该图标之前被加入购物车
         if (cart[iconId]) {
             li.classList.add('selected');
             const cartIcon = li.querySelector('.icon-gouwuche.cover-item');
@@ -104,14 +102,36 @@ function restoreCartStates() {
     });
 }
 
-// 更新购物车计数器
+// 更新购物车计数器函数
 function updateCartCount() {
     const count = SessionStorageManager.getCartCount();
     
-    // 更新侧边栏购物车计数器
-    const sidebarCount = document.getElementById('J_icon_sidebar_count');
-    if (sidebarCount) {
-        sidebarCount.textContent = count;
+    // 更新所有购物车计数器元素（包括顶部导航栏和悬浮球）
+    const allCartCounts = document.querySelectorAll('#J_icon_sidebar_count');
+    allCartCounts.forEach(sidebarCount => {
+        if (sidebarCount) {
+            if (count === 0) {
+                sidebarCount.style.display = 'none';
+            } else {
+                sidebarCount.style.display = 'flex';
+                sidebarCount.textContent = count;
+            }
+        }
+    });
+    
+    // 更新购物车为空状态显示
+    const cartContainer = document.getElementById('J_block_car_container');
+    if (cartContainer) {
+        const iconsContainer = cartContainer.querySelector('.icons-container');
+        if (iconsContainer) {
+            if (count === 0) {
+                // 当购物车为空时，始终显示空购物车提示
+                iconsContainer.innerHTML = '<div class="no-result"><img src="./web_assets/background/car.png" alt="购物车为空" style="width: 170px; height: 200px;"><div class="no-result-message">购物车为空</div></div>';
+            } else if (iconsContainer.querySelector('.no-result')) {
+                // 当购物车不为空且当前显示空购物车提示时，清空提示
+                iconsContainer.innerHTML = '';
+            }
+        }
     }
 }
 
