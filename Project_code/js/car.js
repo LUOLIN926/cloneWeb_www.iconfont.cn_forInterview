@@ -1,6 +1,6 @@
 // 购物车功能
 document.addEventListener('DOMContentLoaded', function() {
-    // 获取元素
+    
     const cartIcon = document.querySelector('.iconfont.icon-gouwuche');
     const cartContainer = document.getElementById('J_block_car_container');
     const overlay = document.getElementById('overlay');
@@ -11,16 +11,14 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
     }
     
-    // 使用现有的关闭按钮元素
     const closeBtn = document.querySelector('.top-back.iconfont.icon-right');
     
-    // 创建清空购物车按钮
+    // 清空购物车按钮
     const clearCartBtn = document.createElement('span');
     clearCartBtn.className = 'btn-clean-all';
     clearCartBtn.innerHTML = '<span class="iconfont icon-gouwuche"></span>清空购物车';
     clearCartBtn.style.cursor = 'pointer';
     
-    // 添加到顶栏
     const carTop = cartContainer.querySelector('.car-top');
     if (carTop) {
         carTop.appendChild(clearCartBtn);
@@ -35,16 +33,15 @@ function openCart() {
     updateCartCount();
 }
     
-    // 关闭购物车函数
-    function closeCart() {
-        cartContainer.classList.remove('show');
-        overlay.classList.remove('active');
-        
-        // 延迟重置背景滚动，等动画完成
-        setTimeout(() => {
-            document.body.style.overflow = '';
-        }, 300);
-    }
+// 关闭购物车函数
+function closeCart() {
+    cartContainer.classList.remove('show');
+    overlay.classList.remove('active');
+    
+    setTimeout(() => {
+        document.body.style.overflow = '';
+    }, 300);
+}
     
 // 清空购物车函数
 function clearCart() {
@@ -52,7 +49,7 @@ function clearCart() {
     
     updateCartCount();
     
-    // 清除图标的选中状态
+    // 清除选中状态
     document.querySelectorAll('.block-icon-list li.selected').forEach(li => {
         li.classList.remove('selected');
         const cartIcon = li.querySelector('.icon-gouwuche1.cover-item');
@@ -65,7 +62,7 @@ function clearCart() {
     console.log('购物车已清空');
 }
     
-    // 打开/关闭购物车侧拉框
+    // 打开or关闭购物车侧拉框
     cartIcon.addEventListener('click', function(e) {
         e.preventDefault();
         toggleCart();
@@ -92,7 +89,7 @@ function clearCart() {
         }
     });
     
-    // 将函数暴露到全局作用域，方便外部调用
+    // 函数暴露到全局作用域
     window.openCart = openCart;
     window.closeCart = closeCart;
     window.clearCart = clearCart;

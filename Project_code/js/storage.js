@@ -1,4 +1,4 @@
-// sessionStorage 
+// sessionStorage 数据存储
 
 // 会话存储管理器
 const SessionStorageManager = {
@@ -54,18 +54,6 @@ const SessionStorageManager = {
     }
 };
 
-// 页面加载完成后恢复状态
-document.addEventListener('DOMContentLoaded', function() {
-    // 恢复收藏状态
-    restoreFavoriteStates();
-    
-    // 恢复购物车状态
-    restoreCartStates();
-    
-    // 更新购物车计数器
-    updateCartCount();
-});
-
 // 恢复收藏状态
 function restoreFavoriteStates() {
     const favorites = SessionStorageManager.getFavorites();
@@ -102,11 +90,18 @@ function restoreCartStates() {
     });
 }
 
+// 页面加载完成后恢复状态
+document.addEventListener('DOMContentLoaded', function() {
+    restoreFavoriteStates();
+    restoreCartStates();
+    updateCartCount();
+});
+
 // 更新购物车计数器函数
 function updateCartCount() {
     const count = SessionStorageManager.getCartCount();
     
-    // 更新所有购物车计数器元素（包括顶部导航栏和悬浮球）
+    // 更新所有购物车计数器元素（顶部导航栏+悬浮球）
     const allCartCounts = document.querySelectorAll('#J_icon_sidebar_count');
     allCartCounts.forEach(sidebarCount => {
         if (sidebarCount) {
@@ -124,11 +119,10 @@ function updateCartCount() {
     if (cartContainer) {
         const iconsContainer = cartContainer.querySelector('.icons-container');
         if (iconsContainer) {
+            // 空购物车提示
             if (count === 0) {
-                // 当购物车为空时，始终显示空购物车提示
                 iconsContainer.innerHTML = '<div class="no-result"><img src="./web_assets/background/car.png" alt="购物车为空" style="width: 170px; height: 200px;"><div class="no-result-message">购物车为空</div></div>';
             } else if (iconsContainer.querySelector('.no-result')) {
-                // 当购物车不为空且当前显示空购物车提示时，清空提示
                 iconsContainer.innerHTML = '';
             }
         }
