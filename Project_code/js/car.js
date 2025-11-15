@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const cartContainer = document.getElementById('J_block_car_container');
     const overlay = document.getElementById('overlay');
     
-    // 检查必要元素是否存在
+    // ！检查必要元素是否存在
     if (!cartIcon || !cartContainer || !overlay) {
         console.warn('购物车相关元素未找到');
         return;

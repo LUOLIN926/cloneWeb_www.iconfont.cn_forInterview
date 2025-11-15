@@ -30,12 +30,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchDropdown = document.querySelector('.search-dropdown');
     
     if (searchDrop && searchDropdown) {
-        // 点击搜索下拉框时切换显示/隐藏
+        
         searchDrop.addEventListener('click', function(e) {
-            // 阻止事件冒泡，避免点击文档其他地方时立即关闭
-            e.stopPropagation();
             
-            // 切换 dropdown-open 类
+            e.stopPropagation();// !阻止事件冒泡，避免点击文档其他地方时立即关闭
+            
             this.classList.toggle('dropdown-open');
         });
         
@@ -46,7 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 // 移除 dropdown-open 类以关闭下拉框
                 searchDrop.classList.remove('dropdown-open');
                 
-                // 可以在这里添加选择项的处理逻辑
                 const selectedType = this.getAttribute('data-type');
                 const selectedText = this.textContent.trim();
                 
@@ -69,33 +67,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // 推荐卡片标签按钮悬浮效果
 document.addEventListener('DOMContentLoaded', function() {
-    // 获取所有标签按钮
+    
     const tabButtons = document.querySelectorAll('.rec-cards .tab-btn');
     
-    // 记录当前具有current类的按钮（默认是第一个）
+    // 记录当前具有current类的按钮
     let currentActiveButton = tabButtons[0];
     
     // 为每个按钮添加鼠标事件监听器
     tabButtons.forEach(button => {
-        // 鼠标进入事件
+        
         button.addEventListener('mouseenter', function() {
-            // 移除其他按钮的current类
+            
             tabButtons.forEach(btn => {
                 if (btn !== this) {
                     btn.classList.remove('current');
                 }
             });
             
-            // 为当前按钮添加current类
+            
             this.classList.add('current');
-            // 更新当前活动按钮
+            
             currentActiveButton = this;
         });
         
-        // 鼠标离开事件
         button.addEventListener('mouseleave', function() {
-            // 不需要移除current类，让它保留在当前按钮上
-            // 只需更新当前活动按钮的引用
             currentActiveButton = this;
         });
     });
@@ -103,12 +98,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // 推荐卡片标签按钮悬浮效果（显示对应Collections）
 document.addEventListener('DOMContentLoaded', function() {
-    // 获取所有标签按钮
+    
     const tabButtons = document.querySelectorAll('.rec-cards .tab-btn');
-    // 获取所有推荐内容区域
     const recommendContents = document.querySelectorAll('.recommendContent');
     
-    // 初始化：确保第一个标签和内容区域是激活状态
+    // 初始化
     if (tabButtons.length > 0 && recommendContents.length > 0) {
         tabButtons[0].classList.add('current');
         recommendContents[0].classList.add('current');
@@ -118,20 +112,17 @@ document.addEventListener('DOMContentLoaded', function() {
     tabButtons.forEach((button, index) => {
         // 鼠标进入事件
         button.addEventListener('mouseenter', function() {
-            // 移除所有按钮的current类
+            
             tabButtons.forEach(btn => {
                 btn.classList.remove('current');
             });
-            
-            // 为当前按钮添加current类
+           
             this.classList.add('current');
             
-            // 隐藏所有推荐内容区域
             recommendContents.forEach(content => {
                 content.classList.remove('current');
             });
             
-            // 显示对应索引的推荐内容区域
             if (recommendContents[index]) {
                 recommendContents[index].classList.add('current');
             }
@@ -141,29 +132,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // 鼠标悬停播放视频功能
 document.addEventListener('DOMContentLoaded', function() {
-    // 获取所有视频元素
+
     const videoItems = document.querySelectorAll('.ai-list-item video');
     
     // 为每个视频容器添加事件监听器
     videoItems.forEach(video => {
         const container = video.closest('.ai-list-item');
         
-        // 鼠标进入时播放视频
         container.addEventListener('mouseenter', function() {
-            // 重置视频到开头
-            video.currentTime = 0;
-            // 开始播放视频
+            
+            video.currentTime = 0;// 重置视频到开头
+            
             video.play().catch(e => {
-                // 自动播放可能被浏览器阻止，这里捕获错误
-                console.log('视频播放被阻止:', e);
+                console.log('视频播放被阻止:', e);// !自动播放可能被浏览器阻止，这里捕获错误
             });
         });
         
         // 鼠标离开时暂停视频
         container.addEventListener('mouseleave', function() {
             video.pause();
-            // 可选：重置视频到开头
-            video.currentTime = 0;
+            video.currentTime = 0;// 重置视频到开头
         });
     });
 });
